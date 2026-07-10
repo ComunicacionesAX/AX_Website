@@ -14,9 +14,9 @@ export function Ecosystem() {
               <Image
                 src="/images/Iluma-logo.webp"
                 alt="Iluma Alliance"
-                width={260}
-                height={115}
-                className="h-24 w-auto object-contain object-left"
+                width={390}
+                height={173}
+                className="h-36 w-auto object-contain object-left"
               />
             </div>
 

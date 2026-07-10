@@ -21,26 +21,22 @@ function Linkedin({ className = "" }: { className?: string }) {
 const columns = [
   { title: "Productos", links: ["PigVision", "Insylo", "Sensores Ambientales"] },
   { title: "El poder del saber", links: ["Temática 1", "Temática 2", "Temática 3"] },
-  {
-    title: "Centro de soporte",
-    links: ["Preguntas frecuentes por producto", "Guías por producto"],
-  },
 ];
 
 export function Footer() {
   return (
     <footer className="bg-white px-4 pb-4 sm:px-6">
       <div className="mx-auto max-w-[84rem]">
-        <div className="rounded-[2.5rem] bg-gradient-to-br from-teal to-navy px-8 py-16 text-white sm:px-14">
+        <div className="rounded-[2.5rem] bg-gradient-to-br from-teal to-navy px-8 py-11 text-white sm:px-14">
           <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr]">
             {/* Logo + tagline */}
             <div>
               <Image
                 src="/images/logo_ax_completo.svg"
                 alt="Asimetrix — Unlocking the power of data"
-                width={240}
-                height={44}
-                className="h-10 w-auto"
+                width={288}
+                height={53}
+                className="h-12 w-auto"
               />
               <div className="mt-6 flex gap-3">
                 <a
@@ -104,7 +100,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="mt-14 flex flex-col gap-2 border-t border-white/10 pt-8 text-sm text-white/50">
+          <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-white/50">
             <p className="text-pretty">
               Designing nutrition, enhancing lives. 1307 Person St, Durham, North
               Carolina. +57 6041500. © 2026 Iluma Alliance

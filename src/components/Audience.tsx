@@ -26,7 +26,7 @@ export function Audience() {
     >
       <div className="container-x">
         <div className="grid items-center gap-10 lg:grid-cols-4 lg:divide-x lg:divide-navy/10">
-          <h2 className="section-title lg:pr-8">
+          <h2 className="section-title whitespace-nowrap lg:pr-8">
             ¿Para quién
             <br />
             es Asimetrix?
