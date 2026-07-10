@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(lsof -i :3000 -sTCP:LISTEN)",
+      "Bash(cp /tmp/shot.mjs /Users/manuelamesabeltran/Documents/AX_LandingAI/asimetrix-landing/_shot.mjs)",
+      "Bash(node _shot.mjs)",
+      "Bash(rm -f _shot.mjs)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3000)",
+      "mcp__plugin_figma_figma__get_metadata",
+      "mcp__plugin_figma_figma__get_design_context",
+      "Bash(curl -s -o /dev/null -w \"pv_diferencia.jpg HTTP %{http_code} type=%{content_type} size=%{size_download}\\\\n\" http://localhost:3000/images/pigvision/pv_diferencia.jpg)",
+      "Bash(curl -s -o /dev/null -w \"pv_problem.jpg     HTTP %{http_code} type=%{content_type} size=%{size_download}\\\\n\" http://localhost:3000/images/pigvision/pv_problem.jpg)",
+      "Bash(sips --version)",
+      "Bash(sips -s format webp -s formatOptions 75 --resampleWidth 1600 pv_diferencia.jpg --out pv_diferencia.webp)",
+      "Bash(sips --help)",
+      "Bash(grep -iA3 \"format \")",
+      "Bash(node -e \"require.resolve\\('sharp'\\); console.log\\('sharp available:', require\\('sharp'\\).versions?.vips ? 'yes \\(libvips '+require\\('sharp'\\).versions.vips+'\\)' : 'yes'\\)\")",
+      "Bash(node -e \"require.resolve\\('sharp'\\); console.log\\('sharp available'\\)\")",
+      "Bash(read f *)",
+      "Bash([ -f \"public/images/$f\" ])",
+      "Bash(find /Users/manuelamesabeltran/Downloads/AX_Repositorio_Multimedia_Web -type f '\\(' -iname *.webp -o -iname *.jpg -o -iname *.png -o -iname *.svg '\\)')",
+      "Bash(find /Users/manuelamesabeltran/Downloads/AX_Repositorio_Multimedia_Web -iname *problema* -o -iname *problem*)",
+      "Bash(cp '__TRACKED_VAR__/Pig Vision/La Solucion/pigvision_solucion_app.webp' public/images/pigvision/pv_solution_render.webp)",
+      "Bash(cp '__TRACKED_VAR__/Pig Vision/Lo que marca la diferencia/pigvision_diferencia_roi.webp' public/images/pigvision/pv_diferencia.webp)",
+      "Bash(cp '__TRACKED_VAR__/Insylo/La solución/insylo_solucion_app.webp' public/images/insylo/is_solution_center.webp)",
+      "Bash(cp '__TRACKED_VAR__/Insylo/Lo que marca la diferencia/insylo_diferencia_ambiental.webp' public/images/insylo/is_diferencia.webp)",
+      "Bash(cp '__TRACKED_VAR__/Nodos Ambientales/La solucion/nodos_solucion_app.webp' public/images/nodos/nodos_solution_center.webp)",
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(git add *)"
+    ]
+  }
+}
