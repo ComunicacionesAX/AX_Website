@@ -56,13 +56,13 @@ export function Solutions() {
               </div>
               <p className="mt-3 text-[15px] leading-snug text-muted">{s.text}</p>
 
-              <div className="relative mt-6 flex h-52 items-center justify-center overflow-hidden rounded-2xl bg-sky-50">
+              <div className="relative mt-6 flex h-56 items-center justify-center overflow-hidden rounded-2xl bg-sky-50">
                 <Image
                   src={s.img}
                   alt={s.name}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-contain p-5"
+                  className="scale-110 object-contain p-3"
                 />
               </div>
 
@@ -74,10 +74,14 @@ export function Solutions() {
                     style={{ width: `${s.accuracy}%` }}
                   />
                 </div>
-                <p className="mt-2 text-center text-sm text-navy">
-                  <span className="font-bold">{s.accuracy}%</span>
+                <p className="mt-3 text-center text-navy">
+                  <span className="font-display text-4xl font-bold leading-none">
+                    {s.accuracy}%
+                  </span>
                   <br />
-                  <span className="text-xs">de precisión</span>
+                  <span className="mt-1 inline-block text-sm text-muted">
+                    de precisión
+                  </span>
                 </p>
               </div>
 

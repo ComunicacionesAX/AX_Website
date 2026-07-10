@@ -9,7 +9,7 @@ export function VideoSection() {
               sin sobredimensionar el video */}
           <iframe
             title="Tecnología de vanguardia"
-            src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${VIDEO_ID}&controls=0&showinfo=0&rel=0&playsinline=1&modestbranding=1&disablekb=1`}
+            src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${VIDEO_ID}&controls=0&showinfo=0&rel=0&playsinline=1&modestbranding=1&disablekb=1&iv_load_policy=3&fs=0`}
             allow="autoplay; encrypted-media"
             className="pointer-events-none absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 scale-[1.25]"
           />
