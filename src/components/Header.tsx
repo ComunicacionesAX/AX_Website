@@ -86,7 +86,7 @@ export function Header() {
           </div>
 
           <a
-            href="/#poder"
+            href="/poder-del-saber"
             className={`rounded-full px-4 py-2 text-[15px] font-medium transition hover:opacity-80 ${linkColor}`}
           >
             El poder del saber
@@ -149,7 +149,7 @@ export function Header() {
               </a>
             ))}
             <a
-              href="/#poder"
+              href="/poder-del-saber"
               onClick={() => setMobile(false)}
               className="rounded-lg px-2 py-2 text-sm font-medium text-navy"
             >
