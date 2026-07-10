@@ -1,23 +1,21 @@
-const VIDEO_ID = "4OXS_f9DCPU";
-
 export function Hero() {
   return (
     <section
       id="top"
       className="relative overflow-hidden rounded-b-[2.5rem] bg-navy text-white"
     >
-      {/* Background video */}
+      {/* Background video — self-hosted, sin controles de reproductor */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(/images/home_produccion_fotograma.webp)" }}
-        />
-        <iframe
-          title="Asimetrix"
-          src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${VIDEO_ID}&controls=0&showinfo=0&rel=0&playsinline=1&modestbranding=1&disablekb=1&iv_load_policy=3&fs=0`}
-          allow="autoplay; encrypted-media"
-          className="pointer-events-none absolute left-1/2 top-1/2 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2 scale-[1.35]"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/home_produccion_fotograma.webp"
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/images/home_hero.mp4" type="video/mp4" />
+        </video>
         {/* Navy overlays for contrast */}
         <div className="absolute inset-0 bg-navy/55" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/40 to-navy/60" />
