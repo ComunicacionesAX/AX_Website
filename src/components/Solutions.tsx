@@ -36,7 +36,7 @@ export function Solutions() {
           Así lo soluciona Asimetrix
         </h2>
 
-        <div className="mt-16 grid items-stretch gap-6 md:grid-cols-3">
+        <div className="mt-8 grid items-stretch gap-6 md:grid-cols-3">
           {solutions.map((s) => (
             <article
               key={s.name}

@@ -9,14 +9,18 @@ export function Ecosystem() {
             {/* Left: heading + iluma */}
             <div className="flex flex-col justify-between gap-12">
               <h2 className="section-title !text-white">
-                Somos parte de un ecosistema global de innovación
+                Somos parte de un
+                <br />
+                ecosistema global
+                <br />
+                de innovación
               </h2>
               <Image
                 src="/images/Iluma-logo.webp"
                 alt="Iluma Alliance"
-                width={390}
-                height={173}
-                className="h-36 w-auto object-contain object-left"
+                width={700}
+                height={310}
+                className="h-72 w-auto object-contain object-left"
               />
             </div>
 
