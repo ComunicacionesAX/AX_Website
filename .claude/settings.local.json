@@ -34,7 +34,9 @@
       "Bash(xargs -I{} echo \"{} tracked \\(should be 0\\)\")",
       "Bash(git commit -q -m ' *)",
       "Bash(mdls *)",
-      "Bash(gh auth *)"
+      "Bash(gh auth *)",
+      "Bash(gh repo *)",
+      "Bash(git push *)"
     ]
   }
 }

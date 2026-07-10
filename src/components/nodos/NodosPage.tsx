@@ -25,9 +25,9 @@ const comparison = {
 export function NodosPage() {
   return (
     <div className="bg-gradient-to-b from-sky-50 via-white to-sky-50">
-      {/* Hero */}
-      <section className="container-x pt-28">
-        <div className="relative overflow-hidden rounded-[30px] bg-navy text-white">
+      {/* Hero — mismas características gráficas que el home */}
+      <section className="relative overflow-hidden rounded-b-[2.5rem] bg-navy text-white">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <Image
             src="/images/nodos/nodos_problem.webp"
             alt=""
@@ -36,14 +36,18 @@ export function NodosPage() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-navy/80" />
-          <div className="relative flex min-h-[560px] flex-col justify-center px-8 py-16 sm:px-14 lg:min-h-[680px]">
-            <h1 className="font-display text-6xl font-medium leading-none tracking-tight sm:text-7xl lg:text-9xl">
+          <div className="absolute inset-0 bg-navy/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/40 to-navy/60" />
+        </div>
+
+        <div className="container-x relative flex min-h-[100vh] flex-col justify-center pb-28 pt-36">
+          <div className="max-w-5xl animate-fade-up">
+            <h1 className="font-display text-[clamp(3.325rem,11.4vw,10.925rem)] font-light leading-[0.92] tracking-tight">
               Nodos
               <br />
               ambientales
             </h1>
-            <p className="mt-6 max-w-2xl font-display text-xl font-light sm:text-3xl">
+            <p className="mt-3 max-w-2xl font-display text-xl font-light text-white/90 sm:text-3xl sm:leading-tight">
               Monitoreo continuo de variables clave: temperatura, humedad, CO₂ y
               luz para mantener estabilidad y anticipar riesgos.
             </p>
@@ -51,19 +55,21 @@ export function NodosPage() {
               Condiciones visibles, intervención oportuna.
             </p>
 
-            <a
-              href="/#cotizar"
-              className="mt-10 inline-flex w-fit items-center rounded-lg bg-teal px-7 py-3.5 text-base font-semibold text-cyan transition hover:bg-teal-600"
-            >
-              Agendar demostración
-            </a>
-
-            {/* Precision badge */}
-            <div className="mt-12 max-w-xs lg:absolute lg:right-14 lg:top-24 lg:mt-0">
-              <div className="h-2 w-52 rounded-full bg-cyan" />
-              <div className="mt-4 font-display text-6xl font-bold sm:text-7xl">99%</div>
-              <div className="mt-1 text-2xl sm:text-3xl">de precisión</div>
+            <div className="mt-14">
+              <a
+                href="/#cotizar"
+                className="inline-flex items-center rounded-xl bg-teal px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-navy/40 transition hover:bg-teal-600"
+              >
+                Agendar demostración
+              </a>
             </div>
+          </div>
+
+          {/* Precision badge */}
+          <div className="mt-10 max-w-xs self-start lg:absolute lg:bottom-36 lg:right-6 lg:mt-0 lg:self-auto xl:right-16">
+            <div className="h-2 w-52 rounded-full bg-cyan" />
+            <div className="mt-4 font-display text-6xl font-bold sm:text-7xl">99%</div>
+            <div className="mt-1 text-2xl sm:text-3xl">de precisión</div>
           </div>
         </div>
       </section>
