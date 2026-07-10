@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Cámaras inteligentes, sensores y herramientas de IA que transforman datos en rentabilidad para granjas porcinas y avícolas.",
   icons: {
-    icon: "/images/logo_ax_isotipo.svg",
+    icon: "/images/logo_ax_isotipo_blue.svg",
   },
 };
 

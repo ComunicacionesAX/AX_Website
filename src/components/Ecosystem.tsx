@@ -8,7 +8,7 @@ export function Ecosystem() {
           <div className="grid gap-12 lg:grid-cols-2">
             {/* Left: heading + iluma */}
             <div className="flex flex-col justify-between gap-12">
-              <h2 className="font-display text-4xl font-light leading-[1.15] tracking-tight sm:text-5xl">
+              <h2 className="section-title !text-white">
                 Somos parte de un ecosistema global de innovación
               </h2>
               <Image

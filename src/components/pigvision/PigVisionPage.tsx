@@ -87,7 +87,7 @@ export function PigVisionPage() {
 
       {/* El problema */}
       <section className="container-x py-28">
-        <h2 className="text-balance text-center font-display text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl lg:text-6xl">
+        <h2 className="section-title text-balance text-center">
           El problema de pensar de forma tradicional
         </h2>
 
@@ -123,7 +123,7 @@ export function PigVisionPage() {
 
       {/* La solución */}
       <section className="container-x py-16">
-        <h2 className="text-center font-display text-4xl font-semibold tracking-tight text-navy sm:text-5xl lg:text-6xl">
+        <h2 className="section-title text-center">
           La solución
         </h2>
         <p className="mt-4 text-center font-display text-2xl font-light text-navy/80 sm:text-4xl">
@@ -181,7 +181,7 @@ export function PigVisionPage() {
 
       {/* Lo que marca la diferencia */}
       <section className="container-x py-28">
-        <h2 className="text-center font-display text-4xl font-semibold tracking-tight text-navy sm:text-5xl lg:text-6xl">
+        <h2 className="section-title text-center">
           Lo que marca la diferencia
         </h2>
 
@@ -208,7 +208,7 @@ export function PigVisionPage() {
 
       {/* CTA con producto */}
       <section className="container-x py-16 text-center">
-        <h2 className="mx-auto max-w-4xl text-balance font-display text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl lg:text-6xl">
+        <h2 className="section-title mx-auto max-w-4xl text-balance text-center">
           Empieza a tomar decisiones con datos reales
         </h2>
         <a
@@ -222,7 +222,7 @@ export function PigVisionPage() {
       {/* Ecosistema — comparison table */}
       <section className="container-x pb-8 pt-16">
         <div className="rounded-[24px] bg-navy px-6 py-16 text-white sm:px-12">
-          <h2 className="text-center font-display text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+          <h2 className="section-title !text-white text-center">
             PigVision se conecta{" "}
             <span className="font-light">con aplicaciones del ecosistema Asimetrix</span>
           </h2>

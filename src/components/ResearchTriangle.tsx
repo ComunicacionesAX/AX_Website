@@ -9,7 +9,7 @@ export function ResearchTriangle() {
             <p className="font-display text-2xl font-light text-navy/80 sm:text-3xl">
               Nos situamos en
             </p>
-            <h2 className="mt-1 font-display text-4xl font-bold leading-[1.1] tracking-tight text-navy sm:text-5xl">
+            <h2 className="section-title mt-1">
               el Research Triangle,
             </h2>
             <p className="mt-1 font-display text-2xl font-light text-navy/80 sm:text-3xl">

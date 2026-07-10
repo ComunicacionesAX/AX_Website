@@ -27,7 +27,7 @@ export function Problems() {
   return (
     <section className="bg-gradient-to-b from-white via-sky-50 to-white py-28">
       <div className="container-x">
-        <h2 className="mx-auto max-w-3xl text-center font-display text-4xl font-bold leading-[1.05] tracking-tight text-navy sm:text-5xl lg:text-6xl">
+        <h2 className="section-title mx-auto max-w-3xl text-center">
           Lo que pasa cuando decides sin datos
         </h2>
       </div>

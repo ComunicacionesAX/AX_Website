@@ -11,8 +11,6 @@ const products = [
   // SmartWeight oculto hasta que la sección esté lista
 ];
 
-const analytics = ["Optimarket", "Feeding Phases Tuning", "Econometrix", "Benchmark"];
-
 export function Header() {
   const [open, setOpen] = useState(false);
   const [mobile, setMobile] = useState(false);
@@ -35,18 +33,16 @@ export function Header() {
       }`}
     >
       <div className="container-x flex h-[92px] items-center justify-between gap-6">
-        <a href="/#top" className="flex items-center">
+        <a href="/" aria-label="Ir al inicio" className="flex items-center">
           <Logo variant={solid ? "dark" : "cyan"} />
         </a>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 lg:flex">
-          <div
-            className="relative"
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}
-          >
+          <div className="relative">
             <button
+              onClick={() => setOpen((v) => !v)}
+              aria-expanded={open}
               className={`flex items-center gap-1 rounded-full px-4 py-2 text-[15px] font-medium transition hover:opacity-80 ${linkColor}`}
             >
               Productos
@@ -55,38 +51,33 @@ export function Header() {
               />
             </button>
             {open && (
-              <div className="absolute left-1/2 top-full w-[34rem] -translate-x-1/2 pt-3">
-                <div className="grid grid-cols-2 gap-1 rounded-2xl border border-line bg-white p-3 shadow-2xl shadow-navy/10">
-                  <div className="col-span-2 px-3 pb-1 pt-2 text-xs font-semibold uppercase tracking-wider text-teal">
-                    Productos
-                  </div>
-                  {products.map((p) => (
-                    <a
-                      key={p.name}
-                      href={p.href}
-                      className="group rounded-xl p-3 transition hover:bg-sky-50"
-                    >
-                      <div className="text-sm font-semibold text-navy">
-                        {p.name}
-                      </div>
-                      <div className="text-xs text-muted">{p.desc}</div>
-                    </a>
-                  ))}
-                  <div className="col-span-2 mt-1 border-t border-line px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wider text-teal">
-                    Analítica
-                  </div>
-                  <div className="col-span-2 flex flex-wrap gap-2 px-3 pb-2">
-                    {analytics.map((a) => (
-                      <span
-                        key={a}
-                        className="rounded-full bg-sky px-3 py-1 text-xs font-medium text-navy-800"
+              <>
+                {/* Click-outside backdrop */}
+                <div
+                  className="fixed inset-0 z-40"
+                  onClick={() => setOpen(false)}
+                  aria-hidden
+                />
+                <div className="fixed inset-x-0 top-[92px] z-50 border-y border-white/20 bg-white/10 shadow-2xl shadow-navy/30 backdrop-blur-2xl backdrop-saturate-150 [background-image:linear-gradient(to_bottom,rgba(255,255,255,0.15),rgba(255,255,255,0.05))]">
+                  <div className="container-x flex flex-col py-4">
+                    {products.map((p) => (
+                      <a
+                        key={p.name}
+                        href={p.href}
+                        onClick={() => setOpen(false)}
+                        className="group rounded-lg px-4 py-3 transition hover:bg-white/10"
                       >
-                        {a}
-                      </span>
+                        <div className="text-base font-semibold text-white transition [text-shadow:0_1px_3px_rgba(4,9,57,0.5)] group-hover:text-cyan">
+                          {p.name}
+                        </div>
+                        <div className="text-sm text-white/90 [text-shadow:0_1px_2px_rgba(4,9,57,0.4)]">
+                          {p.desc}
+                        </div>
+                      </a>
                     ))}
                   </div>
                 </div>
-              </div>
+              </>
             )}
           </div>
 
@@ -104,9 +95,11 @@ export function Header() {
           </a>
         </nav>
 
-        <div className="hidden flex-col items-end gap-1.5 lg:flex">
+        <div className="hidden flex-col items-end lg:flex">
           <a
-            href="/#login"
+            href="https://app.asimetrix.co/auth/login"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`rounded-full px-8 py-2 text-[15px] font-semibold transition ${
               solid
                 ? "bg-navy text-white hover:bg-navy-800"
@@ -116,7 +109,7 @@ export function Header() {
             Login
           </a>
           <div
-            className={`flex items-center gap-1.5 text-xs ${linkColor}`}
+            className={`mt-1.5 flex w-full items-center justify-center gap-1.5 text-xs ${linkColor}`}
           >
             <button className="font-medium underline underline-offset-2">ES</button>
             <span className="opacity-30">|</span>
@@ -166,7 +159,9 @@ export function Header() {
               Cotizar
             </a>
             <a
-              href="/#login"
+              href="https://app.asimetrix.co/auth/login"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobile(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full border border-navy/20 px-5 py-3 text-sm font-semibold text-navy"
             >

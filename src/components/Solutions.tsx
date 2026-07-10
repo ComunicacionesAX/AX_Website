@@ -32,7 +32,7 @@ export function Solutions() {
       className="bg-gradient-to-b from-white via-sky-50 to-white py-32"
     >
       <div className="container-x">
-        <h2 className="text-center font-display text-4xl font-bold tracking-tight text-navy sm:text-5xl lg:text-6xl">
+        <h2 className="section-title text-center">
           Así lo soluciona Asimetrix
         </h2>
 

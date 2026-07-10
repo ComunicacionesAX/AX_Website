@@ -6,7 +6,7 @@ export function CTA() {
     >
       <div className="container-x">
         <div className="rounded-[2.5rem] bg-white px-8 py-24 text-center shadow-xl shadow-navy/5">
-          <h2 className="mx-auto max-w-3xl font-display text-4xl font-bold leading-[1.1] tracking-tight text-navy sm:text-5xl lg:text-6xl">
+          <h2 className="section-title mx-auto max-w-3xl">
             Empieza a tomar decisiones con datos reales
           </h2>
           <a

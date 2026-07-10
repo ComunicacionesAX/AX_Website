@@ -44,14 +44,18 @@ export function Footer() {
               />
               <div className="mt-6 flex gap-3">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/asimetrix_?igsh=eXFjbmN1a2J0bnpq&utm_source=qr"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Instagram"
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-cyan transition hover:bg-white/10"
                 >
                   <Instagram className="h-5 w-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/asimetrix/?viewAsMember=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="LinkedIn"
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-cyan transition hover:bg-white/10"
                 >
@@ -85,7 +89,9 @@ export function Footer() {
                 Escríbenos y te contactaremos.
               </p>
               <a
-                href="#login"
+                href="https://app.asimetrix.co/auth/login"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-navy transition hover:bg-white/90"
               >
                 Login

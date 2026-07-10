@@ -30,7 +30,10 @@
       "Bash(cp '__TRACKED_VAR__/Nodos Ambientales/La solucion/nodos_solucion_app.webp' public/images/nodos/nodos_solution_center.webp)",
       "Bash(git init *)",
       "Bash(git config *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(xargs -I{} echo \"{} tracked \\(should be 0\\)\")",
+      "Bash(git commit -q -m ' *)",
+      "Bash(mdls *)"
     ]
   }
 }

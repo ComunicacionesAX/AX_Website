@@ -35,10 +35,22 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     letter-spacing: -0.01em;
+    /* Escala global al 80% (equivale a ver la página con el zoom del navegador al 80%) */
+    zoom: 0.8;
   }
 }
 
 @layer utilities {
+  /* Unified section headings: same color, size y tracking en toda la web.
+     Reducidos al 60% del tamaño anterior (3.75rem -> 2.25rem). */
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-navy);
+  }
   .container-x {
     width: 100%;
     max-width: 80rem;
