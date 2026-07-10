@@ -28,14 +28,16 @@ export function NodosPage() {
       {/* Hero — mismas características gráficas que el home */}
       <section className="relative overflow-hidden rounded-b-[2.5rem] bg-navy text-white">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <Image
-            src="/images/nodos/nodos_problem.webp"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/nodos/nodos_problem.webp"
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src="/images/nodos/nodos_hero.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-navy/55" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/40 to-navy/60" />
         </div>
