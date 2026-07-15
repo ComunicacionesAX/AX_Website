@@ -1,3 +1,5 @@
-# This is NOT the Next.js you know
+# AX Website
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+Vanilla Next.js 16 (App Router) + React 19 + Tailwind CSS v4 + TypeScript. No custom framework layer — treat it as a standard Next.js project.
+
+See `README.md` for setup and scripts.
