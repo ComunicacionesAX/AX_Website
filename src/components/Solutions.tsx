@@ -1,40 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import { Plus } from "lucide-react";
+import { useI18n } from "@/i18n/context";
 
-const solutions = [
-  {
-    img: "/images/home_render_pigvision-768x536.webp",
-    name: "PigVision",
-    text: "Conoce el peso preciso de tus lotes sin estresar a los cerdos.",
-    accuracy: 98,
-    href: "/pigvision",
-  },
-  {
-    img: "/images/home_render_nodos-768x536.webp",
-    name: "Sensores ambientales",
-    text: "Monitoreo continuo de temperatura, humedad, CO₂ y amoníaco.",
-    accuracy: 99,
-    href: "/nodos",
-  },
-  {
-    img: "/images/home_render_insylo-1-768x1131.webp",
-    name: "Insylo",
-    text: "Conoce el nivel real de tus silos y evita faltantes de alimento.",
-    accuracy: 97,
-    href: "/insylo",
-  },
+const meta = [
+  { img: "/images/home_render_pigvision-768x536.webp", accuracy: 98, href: "/pigvision" },
+  { img: "/images/home_render_nodos-768x536.webp", accuracy: 99, href: "/nodos" },
+  { img: "/images/home_render_insylo-1-768x1131.webp", accuracy: 97, href: "/insylo" },
 ];
 
 export function Solutions() {
+  const { t } = useI18n();
+  const solutions = t.solutions.items.map((s, i) => ({ ...s, ...meta[i] }));
   return (
     <section
       id="soluciones"
       className="bg-gradient-to-b from-white via-sky-50 to-white py-32"
     >
       <div className="container-x">
-        <h2 className="section-title text-center">
-          Así lo soluciona Asimetrix
-        </h2>
+        <h2 className="section-title text-center">{t.solutions.title}</h2>
 
         <div className="mt-8 grid items-stretch gap-6 md:grid-cols-3">
           {solutions.map((s) => (
@@ -48,7 +33,7 @@ export function Solutions() {
                 </h3>
                 <a
                   href={s.href}
-                  aria-label={`Ver ${s.name}`}
+                  aria-label={`${t.solutions.see} ${s.name}`}
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-cyan text-navy transition hover:bg-cyan/80"
                 >
                   <Plus className="h-5 w-5" />
@@ -80,7 +65,7 @@ export function Solutions() {
                   </span>
                   <br />
                   <span className="mt-1 inline-block text-sm text-muted">
-                    de precisión
+                    {t.solutions.precision}
                   </span>
                 </p>
               </div>
@@ -89,7 +74,7 @@ export function Solutions() {
                 href={s.href}
                 className="mt-5 rounded-xl bg-teal px-6 py-3 text-center text-[15px] font-semibold text-white transition hover:bg-teal-600"
               >
-                Ver cómo funciona
+                {t.solutions.seeHow}
               </a>
             </article>
           ))}

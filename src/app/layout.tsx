@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { OnixButton } from "@/components/OnixButton";
+import { LanguageProvider } from "@/i18n/context";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "Cámaras inteligentes, sensores y herramientas de IA que transforman datos en rentabilidad para granjas porcinas y avícolas.",
   icons: {
-    icon: "/images/logo_ax_isotipo_blue.svg",
+    icon: "/favicon.svg",
   },
 };
 
@@ -24,10 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body className={`${inter.variable} flex min-h-screen flex-col`}>
-        {children}
-        <OnixButton />
+        <LanguageProvider>
+          {children}
+          <OnixButton />
+        </LanguageProvider>
       </body>
     </html>
   );

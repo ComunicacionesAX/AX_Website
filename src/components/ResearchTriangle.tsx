@@ -1,28 +1,26 @@
+"use client";
+
 import Image from "next/image";
+import { useI18n } from "@/i18n/context";
 
 export function ResearchTriangle() {
+  const { t } = useI18n();
   return (
     <section className="bg-gradient-to-b from-white via-sky-50 to-white py-28">
       <div className="container-x">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
             <p className="font-display text-2xl font-light text-navy/80 sm:text-3xl">
-              Nos situamos en
+              {t.research.pre}
             </p>
-            <h2 className="section-title mt-1">
-              el Research Triangle,
-            </h2>
+            <h2 className="section-title mt-1">{t.research.title}</h2>
             <p className="mt-1 font-display text-2xl font-light text-navy/80 sm:text-3xl">
-              Carolina del Norte
+              {t.research.post}
             </p>
 
             <div className="mt-8 max-w-md space-y-4 text-lg leading-relaxed text-muted">
-              <p>Uno de los epicentros de innovación, investigación y ciencias de la vida.</p>
-              <p>
-                Un entorno que impulsa nuestro desarrollo tecnológico y fortalece
-                nuestra capacidad para transformar conocimiento en soluciones
-                reales para la producción animal.
-              </p>
+              <p>{t.research.p1}</p>
+              <p>{t.research.p2}</p>
             </div>
           </div>
 
@@ -30,7 +28,7 @@ export function ResearchTriangle() {
             <div className="relative aspect-[724/683]">
               <Image
                 src="/images/home_research_triangle.webp"
-                alt="Research Triangle, Carolina del Norte"
+                alt={t.research.imageAlt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"
                 className="object-cover"

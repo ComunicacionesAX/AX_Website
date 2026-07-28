@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
+import { useI18n } from "@/i18n/context";
 
 export function Ecosystem() {
+  const { t } = useI18n();
   return (
     <section className="bg-white px-4 py-6 sm:px-6">
       <div className="mx-auto max-w-[84rem]">
@@ -9,11 +13,11 @@ export function Ecosystem() {
             {/* Left: heading + iluma */}
             <div className="flex flex-col justify-between gap-12">
               <h2 className="section-title !text-white">
-                Somos parte de un
+                {t.ecosystem.title1}
                 <br />
-                ecosistema global
+                {t.ecosystem.title2}
                 <br />
-                de innovación
+                {t.ecosystem.title3}
               </h2>
               <Image
                 src="/images/Iluma-logo.webp"
@@ -27,26 +31,24 @@ export function Ecosystem() {
             {/* Right: copy + stats */}
             <div className="lg:pt-2">
               <p className="max-w-md text-pretty text-lg leading-relaxed text-white/70">
-                Impulsados por el propósito de diseñar nutrición para mejorar
-                vidas. Integramos ciencia, tecnología y conocimiento para
-                enfrentar los desafíos reales de la producción animal.
+                {t.ecosystem.copy}
               </p>
 
               <div className="mt-12 space-y-8">
                 <div>
                   <div className="font-display text-5xl font-bold text-yellow sm:text-6xl">
-                    +1000 personas
+                    {t.ecosystem.stat1Value}
                   </div>
                   <p className="mt-2 font-semibold text-white">
-                    alineadas bajo un mismo propósito.
+                    {t.ecosystem.stat1Label}
                   </p>
                 </div>
                 <div>
                   <div className="font-display text-5xl font-bold text-yellow sm:text-6xl">
-                    + 600 millones
+                    {t.ecosystem.stat2Value}
                   </div>
                   <p className="mt-2 font-semibold text-white">
-                    de vidas diarias impactadas
+                    {t.ecosystem.stat2Label}
                   </p>
                 </div>
               </div>

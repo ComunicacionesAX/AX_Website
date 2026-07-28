@@ -1,24 +1,17 @@
-import Image from "next/image";
+"use client";
 
-const segments = [
-  {
-    icon: "/images/icons/icon_para_productores.svg",
-    title: "Productores",
-    text: "que buscan más control y rentabilidad",
-  },
-  {
-    icon: "/images/icons/icon_para_equipo.svg",
-    title: "Equipos técnicos",
-    text: "que necesitan datos confiables",
-  },
-  {
-    icon: "/images/icons/icon_para_lideres.svg",
-    title: "Líderes",
-    text: "que toman decisiones estratégicas",
-  },
+import Image from "next/image";
+import { useI18n } from "@/i18n/context";
+
+const icons = [
+  "/images/icons/icon_para_productores.svg",
+  "/images/icons/icon_para_equipo.svg",
+  "/images/icons/icon_para_lideres.svg",
 ];
 
 export function Audience() {
+  const { t } = useI18n();
+  const segments = t.audience.segments.map((s, i) => ({ ...s, icon: icons[i] }));
   return (
     <section
       id="poder"
@@ -26,10 +19,10 @@ export function Audience() {
     >
       <div className="container-x">
         <div className="grid items-center gap-10 lg:grid-cols-4 lg:divide-x lg:divide-navy/10">
-          <h2 className="section-title whitespace-nowrap lg:pr-8">
-            ¿Para quién
+          <h2 className="section-title lg:whitespace-nowrap lg:pr-8">
+            {t.audience.title1}
             <br />
-            es Asimetrix?
+            {t.audience.title2}
           </h2>
 
           {segments.map((s) => (

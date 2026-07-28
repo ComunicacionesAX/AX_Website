@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { LangSwitch } from "./LangSwitch";
+import { useI18n } from "@/i18n/context";
 
 function Instagram({ className = "" }: { className?: string }) {
   return (
@@ -18,22 +22,19 @@ function Linkedin({ className = "" }: { className?: string }) {
   );
 }
 
-const columns = [
-  { title: "Productos", links: ["PigVision", "Insylo", "Sensores Ambientales"] },
-  { title: "El poder del saber", links: ["Temática 1", "Temática 2", "Temática 3"] },
-];
-
 export function Footer() {
+  const { t } = useI18n();
+  const columns = [t.footer.colProducts, t.footer.colSaber];
   return (
     <footer className="bg-white px-4 pb-4 sm:px-6">
       <div className="mx-auto max-w-[84rem]">
-        <div className="rounded-[2.5rem] bg-gradient-to-br from-teal to-navy px-8 py-11 text-white sm:px-14">
+        <div className="on-dark rounded-[2.5rem] bg-gradient-to-br from-teal to-navy px-8 py-11 text-white sm:px-14">
           <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr]">
             {/* Logo + tagline */}
             <div>
               <Image
                 src="/images/logo_ax_completo.svg"
-                alt="Asimetrix — Unlocking the power of data"
+                alt={t.footer.logoAlt}
                 width={288}
                 height={53}
                 className="h-12 w-auto"
@@ -65,12 +66,15 @@ export function Footer() {
                 <h4 className="text-lg font-medium text-white">{col.title}</h4>
                 <ul className="mt-4 space-y-3">
                   {col.links.map((l) => (
-                    <li key={l}>
+                    <li key={l.label}>
                       <a
-                        href="#"
+                        href={l.href}
+                        {...("external" in l && l.external
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : {})}
                         className="text-sm text-white/70 transition hover:text-cyan"
                       >
-                        {l}
+                        {l.label}
                       </a>
                     </li>
                   ))}
@@ -80,31 +84,22 @@ export function Footer() {
 
             {/* Cotizar */}
             <div>
-              <h4 className="text-lg font-medium text-white">Cotizar</h4>
-              <p className="mt-4 text-sm text-white/70">
-                Escríbenos y te contactaremos.
-              </p>
+              <h4 className="text-lg font-medium text-white">{t.footer.quoteTitle}</h4>
+              <p className="mt-4 text-sm text-white/70">{t.footer.quoteText}</p>
               <a
                 href="https://app.asimetrix.co/auth/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-navy transition hover:bg-white/90"
               >
-                Login
+                {t.footer.login}
               </a>
-              <div className="mt-3 flex items-center gap-1.5 text-xs text-white/80">
-                <button className="font-medium underline underline-offset-2">ES</button>
-                <span className="opacity-40">|</span>
-                <button className="opacity-60 transition hover:opacity-100">EN</button>
-              </div>
+              <LangSwitch className="mt-3 text-xs text-white/80" />
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-white/50">
-            <p className="text-pretty">
-              Designing nutrition, enhancing lives. 1307 Person St, Durham, North
-              Carolina. +57 6041500. © 2026 Iluma Alliance
-            </p>
+          <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-white/70">
+            <p className="text-pretty">{t.footer.legal}</p>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ export default function PoderDelSaber() {
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main id="main" className="flex-1">
         <SaberPage />
       </main>
       <Footer />

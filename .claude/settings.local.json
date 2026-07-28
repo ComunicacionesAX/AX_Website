@@ -38,7 +38,21 @@
       "Bash(gh repo *)",
       "Bash(git push *)",
       "Bash(avconvert -p PresetHighestQuality -s __TRACKED_VAR__/Home/Hero/home_hero_video.mov -o public/images/home_hero.mp4 --replace)",
-      "Bash(awk '{print $5\" bytes\"}')"
+      "Bash(awk '{print $5\" bytes\"}')",
+      "Bash(node -e \"console.log\\(JSON.stringify\\(require\\('./package.json'\\).scripts,null,2\\)\\)\")",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s -X POST http://localhost:3000/api/cotizar -H \"Content-Type: application/json\" -d '{}' -w \"\\\\nstatus: %{http_code}\\\\n\")",
+      "Bash(curl -s -o /dev/null -w \"home: %{http_code}\\\\n\" http://localhost:3100/)",
+      "Bash(open *)",
+      "Bash(lsof -iTCP:3100 -sTCP:LISTEN -n)",
+      "Bash(curl -s -o /dev/null -w \"3100 home: %{http_code}\\\\n\" --max-time 3 http://localhost:3100/)",
+      "Bash(disown)",
+      "Bash(curl -s -o /dev/null -w \"3100 home: %{http_code}\\\\n\" --max-time 4 http://localhost:3100/)",
+      "Bash(curl -s -o /dev/null -w \"still alive: %{http_code}\\\\n\" --max-time 4 http://localhost:3100/)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"=== exit $? ===\")",
+      "Bash(curl -s -o /dev/null -w \"poder-del-saber: %{http_code}\\\\n\" --max-time 5 http://localhost:3100/poder-del-saber)",
+      "Bash(git rev-list *)"
     ]
   }
 }

@@ -35,8 +35,40 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     letter-spacing: -0.01em;
-    /* Escala global al 80% (equivale a ver la página con el zoom del navegador al 80%) */
-    zoom: 0.8;
+  }
+  /* Escala global al 80% solo en desktop (equivale al zoom del navegador al
+     80%). En móvil se renderiza al 100% natural: `zoom` es no estándar y en
+     pantallas pequeñas encoge los tap targets y choca con position:fixed/vw. */
+  @media (min-width: 1024px) {
+    body {
+      zoom: 0.8;
+    }
+  }
+
+  /* Accesibilidad: foco visible solo para navegación por teclado.
+     Anillo de marca con buen contraste sobre fondos claros y oscuros. */
+  :focus-visible {
+    outline: 2px solid var(--color-teal);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  /* Sobre el header/secciones azul oscuro el teal no contrasta; usa cyan. */
+  .on-dark :focus-visible {
+    outline-color: var(--color-cyan);
+  }
+
+  /* Respeta a quienes prefieren menos movimiento. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
   }
 }
 
@@ -46,7 +78,7 @@
   .section-title {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 40px;
+    font-size: clamp(28px, 6vw, 40px);
     line-height: 1.1;
     letter-spacing: -0.02em;
     color: var(--color-navy);

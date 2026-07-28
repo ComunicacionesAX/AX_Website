@@ -12,7 +12,7 @@ export default function Insylo() {
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main id="main" className="flex-1">
         <InsyloPage />
       </main>
       <Footer />

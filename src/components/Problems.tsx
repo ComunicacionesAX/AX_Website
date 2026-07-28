@@ -1,34 +1,23 @@
-import Image from "next/image";
+"use client";
 
-const problems = [
-  {
-    img: "/images/home_sindatos_silos.webp",
-    title: "No controlas el alimento",
-    text: "Sin saber el nivel real del alimento, pedir más o dejar de pedir te cuesta.",
-  },
-  {
-    img: "/images/home_sindatos_cerditos.webp",
-    title: "Decides con estimaciones",
-    text: "Al no conocer el peso real del lote, puedes retrasar o adelantar salidas y afectar la rentabilidad.",
-  },
-  {
-    img: "/images/home_sindatos_gallina-scaled.webp",
-    title: "Alteras la conversión",
-    text: "Si no detectas a tiempo cambios en las condiciones ambientales, impactas la eficiencia productiva.",
-  },
-  {
-    img: "/images/home_sindatos_silos.webp",
-    title: "Impactas la ganancia de peso",
-    text: "Al perder de vista el estado real del alimento, terminas desperdiciando recursos.",
-  },
+import Image from "next/image";
+import { useI18n } from "@/i18n/context";
+
+const images = [
+  "/images/home_sindatos_silos.webp",
+  "/images/home_sindatos_cerditos.webp",
+  "/images/home_sindatos_gallina-scaled.webp",
+  "/images/home_sindatos_silos.webp",
 ];
 
 export function Problems() {
+  const { t } = useI18n();
+  const problems = t.problems.items.map((p, i) => ({ ...p, img: images[i] }));
   return (
     <section className="bg-gradient-to-b from-white via-sky-50 to-white py-28">
       <div className="container-x">
         <h2 className="section-title mx-auto max-w-3xl text-center">
-          Lo que pasa cuando decides sin datos
+          {t.problems.title}
         </h2>
       </div>
 
@@ -44,7 +33,8 @@ export function Problems() {
               src={p.img}
               alt={p.title}
               fill
-              sizes="400px"
+              sizes="(max-width: 640px) 800px, 1200px"
+              quality={90}
               className="object-cover transition duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/25 to-transparent" />
