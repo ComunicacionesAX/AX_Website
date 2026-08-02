@@ -1,0 +1,393 @@
+Ruta,Sección,Contexto,Texto ES,Texto EN,Notas,Estado
+nav.products,nav,Navegación / header,Productos,Products,,Pendiente
+nav.saber,nav,Navegación / header,El poder del saber,The power of knowing,,Pendiente
+nav.quote,nav,Navegación / header,Cotizar,Get a quote,,Pendiente
+nav.login,nav,Navegación / header,Login,Login,,Pendiente
+nav.goHome,nav,Navegación / header,Ir al inicio,Go to home,,Pendiente
+nav.home,nav,Navegación / header,Inicio,Home,,Pendiente
+nav.menu,nav,Navegación / header,Menú,Menu,,Pendiente
+nav.skipToContent,nav,Navegación / header,Saltar al contenido,Skip to content,,Pendiente
+nav.productItems.[0].name,nav,Navegación / header,PigVision,PigVision,,Pendiente
+nav.productItems.[0].desc,nav,Navegación / header,Cámara para pesar cerdos en ceba,Camera to weigh finishing pigs,,Pendiente
+nav.productItems.[0].href,nav,Navegación / header,/pigvision,/pigvision,,Pendiente
+nav.productItems.[0].img,nav,Navegación / header,/images/home_render_pigvision-768x536.webp,/images/home_render_pigvision-768x536.webp,,Pendiente
+nav.productItems.[1].name,nav,Navegación / header,Insylo,Insylo,,Pendiente
+nav.productItems.[1].desc,nav,Navegación / header,Control del alimento y consumo,Feed and consumption control,,Pendiente
+nav.productItems.[1].href,nav,Navegación / header,/insylo,/insylo,,Pendiente
+nav.productItems.[1].img,nav,Navegación / header,/images/home_render_insylo-1-768x1131.webp,/images/home_render_insylo-1-768x1131.webp,,Pendiente
+nav.productItems.[2].name,nav,Navegación / header,Sensores Ambientales,Environmental Sensors,,Pendiente
+nav.productItems.[2].desc,nav,Navegación / header,Ambiente bajo control,Environment under control,,Pendiente
+nav.productItems.[2].href,nav,Navegación / header,/nodos,/nodos,,Pendiente
+nav.productItems.[2].img,nav,Navegación / header,/images/home_render_nodos-768x536.webp,/images/home_render_nodos-768x536.webp,,Pendiente
+hero.title1,hero,Home · Hero,Nunca más,Never again,,Pendiente
+hero.title2,hero,Home · Hero,decidas sin datos,decide without data,,Pendiente
+hero.subtitle,hero,Home · Hero,Monitoreo inteligente para granjas porcinas y avícolas,Intelligent monitoring for swine and poultry farms,,Pendiente
+hero.cta,hero,Home · Hero,Evaluar mi granja,Assess my farm,,Pendiente
+hero.pill,hero,Home · Hero,"Cámaras inteligentes, sensores y análisis que convierten los datos de tu granja en la certeza de decidir bien.","Smart cameras, sensors and analytics that turn your farm's data into the certainty to decide well.",,Pendiente
+problems.title,problems,Home · 'Lo que pasa cuando decides sin datos',Lo que pasa cuando decides sin datos,What happens when you decide without data,,Pendiente
+problems.items.[0].title,problems,Home · 'Lo que pasa cuando decides sin datos',No controlas el alimento,You don't control the feed,,Pendiente
+problems.items.[0].text,problems,Home · 'Lo que pasa cuando decides sin datos',"Sin saber el nivel real del alimento, pedir más o dejar de pedir te cuesta.","Without knowing the real feed level, ordering more or stopping orders costs you money.",,Pendiente
+problems.items.[1].title,problems,Home · 'Lo que pasa cuando decides sin datos',Decides con estimaciones,You decide on estimates,,Pendiente
+problems.items.[1].text,problems,Home · 'Lo que pasa cuando decides sin datos',"Al no conocer el peso real del lote, puedes retrasar o adelantar salidas y afectar la rentabilidad.","Not knowing the real weight of the batch, you may delay or bring forward shipments and hurt profitability.",,Pendiente
+problems.items.[2].title,problems,Home · 'Lo que pasa cuando decides sin datos',Alteras la conversión,You alter conversion,,Pendiente
+problems.items.[2].text,problems,Home · 'Lo que pasa cuando decides sin datos',"Si no detectas a tiempo cambios en las condiciones ambientales, impactas la eficiencia productiva.","If you don't detect changes in environmental conditions in time, you impact productive efficiency.",,Pendiente
+problems.items.[3].title,problems,Home · 'Lo que pasa cuando decides sin datos',Impactas la ganancia de peso,You impact weight gain,,Pendiente
+problems.items.[3].text,problems,Home · 'Lo que pasa cuando decides sin datos',"Al perder de vista el estado real del alimento, terminas desperdiciando recursos.","By losing sight of the real state of the feed, you end up wasting resources.",,Pendiente
+solutions.title,solutions,Home · 'Así lo solucionamos',Así lo soluciona Asimetrix,How Asimetrix solves it,,Pendiente
+solutions.precision,solutions,Home · 'Así lo solucionamos',de precisión,accuracy,,Pendiente
+solutions.seeHow,solutions,Home · 'Así lo solucionamos',Ver cómo funciona,See how it works,,Pendiente
+solutions.see,solutions,Home · 'Así lo solucionamos',Ver,See,,Pendiente
+solutions.prev,solutions,Home · 'Así lo solucionamos',Producto anterior,Previous product,,Pendiente
+solutions.next,solutions,Home · 'Así lo solucionamos',Siguiente producto,Next product,,Pendiente
+solutions.items.[0].name,solutions,Home · 'Así lo solucionamos',PigVision,PigVision,,Pendiente
+solutions.items.[0].text,solutions,Home · 'Así lo solucionamos',Conoce el peso preciso de tus lotes sin estresar a los cerdos.,Know the precise weight of your batches without stressing the pigs.,,Pendiente
+solutions.items.[1].name,solutions,Home · 'Así lo solucionamos',Insylo,Insylo,,Pendiente
+solutions.items.[1].text,solutions,Home · 'Así lo solucionamos',Conoce el nivel real de tus silos y evita faltantes de alimento.,Know the real level of your silos and avoid feed shortages.,,Pendiente
+solutions.items.[2].name,solutions,Home · 'Así lo solucionamos',Sensores ambientales,Environmental sensors,,Pendiente
+solutions.items.[2].text,solutions,Home · 'Así lo solucionamos',"Monitoreo continuo de temperatura, humedad, CO₂ y amoníaco.","Continuous monitoring of temperature, humidity, CO₂ and ammonia.",,Pendiente
+audience.title1,audience,Home · '¿Para quién es Asimetrix?',¿Para quién,Who is,,Pendiente
+audience.title2,audience,Home · '¿Para quién es Asimetrix?',es Asimetrix?,Asimetrix for?,,Pendiente
+audience.segments.[0].title,audience,Home · '¿Para quién es Asimetrix?',Productores,Producers,,Pendiente
+audience.segments.[0].text,audience,Home · '¿Para quién es Asimetrix?',"que buscan más control, rentabilidad
+y decisiones respaldadas por datos.","seeking more control, profitability
+and decisions backed by real data.",,Pendiente
+audience.segments.[1].title,audience,Home · '¿Para quién es Asimetrix?',Galponeros y técnicos,Farm & technical teams,,Pendiente
+audience.segments.[1].text,audience,Home · '¿Para quién es Asimetrix?',"que necesitan datos confiables
+y simplicidad en su día a día.","who need reliable data
+and simplicity in their day-to-day work.",,Pendiente
+audience.segments.[2].title,audience,Home · '¿Para quién es Asimetrix?',Líderes,Leaders,,Pendiente
+audience.segments.[2].text,audience,Home · '¿Para quién es Asimetrix?',"que toman decisiones estratégicas
+con datos, no con intuición.","who make strategic decisions
+based on data, not guesswork.",,Pendiente
+videoSection.title,videoSection,Home · Video section,Tecnología que funciona en el campo,Technology that works in the field,,Pendiente
+midCta.title,midCta,Home · Mid CTA,¿Quieres ver cómo funcionaría en tu granja?,Want to see how it would work on your farm?,,Pendiente
+midCta.cta,midCta,Home · Mid CTA,Hablemos sobre tu granja,Let's talk about your farm,,Pendiente
+ecosystem.title1,ecosystem,Home · Iluma Alliance,Somos parte de un,We are part of a,,Pendiente
+ecosystem.title2,ecosystem,Home · Iluma Alliance,ecosistema global,global ecosystem,,Pendiente
+ecosystem.title3,ecosystem,Home · Iluma Alliance,de innovación,of innovation,,Pendiente
+ecosystem.copy.[0],ecosystem,Home · Iluma Alliance,Impulsados por el propósito de diseñar nutrición para mejorar vidas.,Driven by the purpose of designing nutrition to improve lives.,,Pendiente
+ecosystem.copy.[1],ecosystem,Home · Iluma Alliance,"Integramos ciencia, tecnología y conocimiento para enfrentar los desafíos reales de la producción animal.","We integrate science, technology and knowledge to face the real challenges of animal production.",,Pendiente
+ecosystem.copy.[2],ecosystem,Home · Iluma Alliance,"En Asimetrix convertimos ese propósito en datos que ayudan a decidir mejor, granja por granja.","At Asimetrix, we turn that purpose into data that helps you decide better, farm by farm.",,Pendiente
+ecosystem.stat1Value,ecosystem,Home · Iluma Alliance,+1000 personas,+1000 people,,Pendiente
+ecosystem.stat1Label,ecosystem,Home · Iluma Alliance,alineadas bajo un mismo propósito.,aligned under a single purpose.,,Pendiente
+ecosystem.stat2Value,ecosystem,Home · Iluma Alliance,+ 600 millones,+ 600 million,,Pendiente
+ecosystem.stat2Label,ecosystem,Home · Iluma Alliance,de vidas diarias impactadas,lives impacted daily,,Pendiente
+research.pre,research,Home · Research Triangle,Nos situamos en,We are located in,,Pendiente
+research.title,research,Home · Research Triangle,"el Research Triangle,","the Research Triangle,",,Pendiente
+research.post,research,Home · Research Triangle,Carolina del Norte,North Carolina,,Pendiente
+research.p1,research,Home · Research Triangle,"Uno de los epicentros de innovación, investigación y ciencias de la vida.","One of the epicenters of innovation, research and life sciences.",,Pendiente
+research.p2,research,Home · Research Triangle,Un entorno que impulsa nuestro desarrollo tecnológico y fortalece nuestra capacidad para transformar conocimiento en soluciones reales para la producción animal.,An environment that drives our technological development and strengthens our capacity to transform knowledge into real solutions for animal production.,,Pendiente
+research.imageAlt,research,Home · Research Triangle,"Research Triangle, Carolina del Norte","Research Triangle, North Carolina",,Pendiente
+cta.title,cta,Home · CTA final,Empieza a tomar decisiones con datos reales,Start making decisions with real data,,Pendiente
+cta.cta,cta,Home · CTA final,Hablemos sobre tu granja,Let's talk about your farm,,Pendiente
+footer.colProducts.title,footer,Footer,Productos,Products,,Pendiente
+footer.colProducts.links.[0].label,footer,Footer,PigVision,PigVision,,Pendiente
+footer.colProducts.links.[0].href,footer,Footer,/pigvision,/pigvision,,Pendiente
+footer.colProducts.links.[1].label,footer,Footer,Insylo,Insylo,,Pendiente
+footer.colProducts.links.[1].href,footer,Footer,/insylo,/insylo,,Pendiente
+footer.colProducts.links.[2].label,footer,Footer,Sensores Ambientales,Environmental Sensors,,Pendiente
+footer.colProducts.links.[2].href,footer,Footer,/nodos,/nodos,,Pendiente
+footer.colSaber.title,footer,Footer,El poder del saber,The power of knowing,,Pendiente
+footer.colSaber.links.[0].label,footer,Footer,Ciencias de la innovación,Sciences of innovation,,Pendiente
+footer.colSaber.links.[0].href,footer,Footer,https://39682324.fs1.hubspotusercontent-na1.net/hubfs/39682324/14+Innovacion+Agropecuaria.pdf,https://39682324.fs1.hubspotusercontent-na1.net/hubfs/39682324/14+Innovacion+Agropecuaria.pdf,,Pendiente
+footer.colSaber.links.[1].label,footer,Footer,Revista digital: BM Editores,Digital magazine: BM Editores,,Pendiente
+footer.colSaber.links.[1].href,footer,Footer,https://bmeditores.mx/porcicultura/asimetrix-marca-la-diferencia-en-control-de-crecimiento-porcino/,https://bmeditores.mx/porcicultura/asimetrix-marca-la-diferencia-en-control-de-crecimiento-porcino/,,Pendiente
+footer.colSaber.links.[2].label,footer,Footer,Revista digital: Pig Progress,Digital magazine: Pig Progress,,Pendiente
+footer.colSaber.links.[2].href,footer,Footer,https://www.pigprogress.net/market-trends-analysis-the-industrymarkets/wrapping-up-february-whats-new-in-the-world-of-pigs-7/,https://www.pigprogress.net/market-trends-analysis-the-industrymarkets/wrapping-up-february-whats-new-in-the-world-of-pigs-7/,,Pendiente
+footer.quoteTitle,footer,Footer,Cotizar,Get a quote,,Pendiente
+footer.quoteText,footer,Footer,Escríbenos y te contactaremos.,Write to us and we'll get in touch.,,Pendiente
+footer.login,footer,Footer,Login,Login,,Pendiente
+footer.legal,footer,Footer,"Asimetrix · Desbloquea el poder de tus datos. Diseñando nutrición, mejorando vidas. 1307 Person St, Durham, North Carolina. +57 6041500. © 2026 Iluma Alliance","Asimetrix · Unlocking the power of data. Designing nutrition, enhancing lives. 1307 Person St, Durham, North Carolina. +57 6041500. © 2026 Iluma Alliance",,Pendiente
+footer.logoAlt,footer,Footer,Asimetrix · Desbloquea el poder de tus datos.,Asimetrix · Unlocking the power of data.,,Pendiente
+onix.label,onix,Widget Onix,Habla con Onix,Talk to Onix,,Pendiente
+onix.title,onix,Widget Onix,¡Soy Onix!,I'm Onix!,,Pendiente
+onix.subtitle,onix,Widget Onix,Hablemos,Let's talk,,Pendiente
+onix.close,onix,Widget Onix,Cerrar Onix,Close Onix,,Pendiente
+onix.reopen,onix,Widget Onix,Volver a abrir Onix,Reopen Onix,,Pendiente
+common.scheduleDemo,common,Comunes (CTAs y labels reutilizados),Agendar demostración,Schedule a demo,,Pendiente
+common.talkFarm,common,Comunes (CTAs y labels reutilizados),Hablemos sobre tu granja,Let's talk about your farm,,Pendiente
+common.startDeciding,common,Comunes (CTAs y labels reutilizados),Empieza a tomar decisiones con datos reales,Start making decisions with real data,,Pendiente
+common.theProblem,common,Comunes (CTAs y labels reutilizados),El problema,The problem,,Pendiente
+common.theSolution,common,Comunes (CTAs y labels reutilizados),La solución,The solution,,Pendiente
+common.whatMakesDifference,common,Comunes (CTAs y labels reutilizados),Lo que marca la diferencia,What makes the difference,,Pendiente
+common.precision,common,Comunes (CTAs y labels reutilizados),de precisión,accuracy,,Pendiente
+common.connectsWith,common,Comunes (CTAs y labels reutilizados),se conecta,connects,,Pendiente
+common.connectsWithRest,common,Comunes (CTAs y labels reutilizados),con aplicaciones del ecosistema Asimetrix,with applications from the Asimetrix ecosystem,,Pendiente
+common.relatedTitle,common,Comunes (CTAs y labels reutilizados),Otros productos que se complementan,Other products that complement,,Pendiente
+common.relatedSubtitle,common,Comunes (CTAs y labels reutilizados),Explora las demás soluciones del ecosistema Asimetrix.,Explore the rest of the Asimetrix ecosystem.,,Pendiente
+common.discoverTitle,common,Comunes (CTAs y labels reutilizados),Conoce nuestros productos,Discover our products,,Pendiente
+common.discoverSubtitle,common,Comunes (CTAs y labels reutilizados),Soluciones que trabajan juntas para transformar tu granja en datos.,Solutions that work together to turn your farm into data.,,Pendiente
+common.seeProduct,common,Comunes (CTAs y labels reutilizados),Conocer,Explore,,Pendiente
+common.productTaglinePigVision,common,Comunes (CTAs y labels reutilizados),"Conoce el peso de tus lotes,
+sin estresar a los cerdos.","Know the weight of your batches,
+without stressing your pigs.",,Pendiente
+common.productTaglineInsylo,common,Comunes (CTAs y labels reutilizados),"Nivel real de tu silo,
+sin quedarte sin alimento.","Real silo level,
+never run out of feed.",,Pendiente
+common.productTaglineNodos,common,Comunes (CTAs y labels reutilizados),"Monitoreo continuo de temperatura,
+humedad y CO₂ en tu granja.","Continuous monitoring of temperature,
+humidity and CO₂ on your farm.",,Pendiente
+pigvision.pageLabel,pigvision,Producto PigVision (/pigvision),PigVision,PigVision,,Pendiente
+pigvision.subtitle,pigvision,Producto PigVision (/pigvision),"Cámara inteligente para
+pesar cerdos en ceba",Smart camera to weigh finishing pigs,,Pendiente
+pigvision.range,pigvision,Producto PigVision (/pigvision),de 30Kg a 150Kg,from 30kg to 150kg,,Pendiente
+pigvision.problemTitle,pigvision,Producto PigVision (/pigvision),El problema de pensar de forma tradicional,The problem with thinking the traditional way,,Pendiente
+pigvision.problemImgAlt,pigvision,Producto PigVision (/pigvision),Cerdos en granja,Pigs on a farm,,Pendiente
+pigvision.problems.[0].bold,pigvision,Producto PigVision (/pigvision),Pesajes manuales,Manual weighings,,Pendiente
+pigvision.problems.[0].rest,pigvision,Producto PigVision (/pigvision),que estresan a los cerdos,that stress the pigs,,Pendiente
+pigvision.problems.[1].bold,pigvision,Producto PigVision (/pigvision),Datos poco frecuentes,Infrequent data,,Pendiente
+pigvision.problems.[1].rest,pigvision,Producto PigVision (/pigvision),o inestables,or unstable data,,Pendiente
+pigvision.problems.[2].bold,pigvision,Producto PigVision (/pigvision),Decisiones tardías sobre,Late decisions about,,Pendiente
+pigvision.problems.[2].rest,pigvision,Producto PigVision (/pigvision),crecimiento y venta,growth and sale,,Pendiente
+pigvision.solutionSubtitle,pigvision,Producto PigVision (/pigvision),datos claros para soluciones productivas,clear data for productive solutions,,Pendiente
+pigvision.solutionImgAltPigs,pigvision,Producto PigVision (/pigvision),Cerdos monitoreados,Monitored pigs,,Pendiente
+pigvision.solutionImgAltRender,pigvision,Producto PigVision (/pigvision),PigVision plataforma de monitoreo,PigVision monitoring platform,,Pendiente
+pigvision.highlightTitle1,pigvision,Producto PigVision (/pigvision),Medición,Contactless,,Pendiente
+pigvision.highlightTitle2,pigvision,Producto PigVision (/pigvision),sin contacto,measurement,,Pendiente
+pigvision.highlightText,pigvision,Producto PigVision (/pigvision),Calcula el peso sin tocar ni estresar a los animales.,Calculate weight without touching or stressing the animals.,,Pendiente
+pigvision.features.[0].title,pigvision,Producto PigVision (/pigvision),Detección de anomalías en el crecimiento,Growth anomaly detection,,Pendiente
+pigvision.features.[0].text,pigvision,Producto PigVision (/pigvision),Identifica desviaciones en el desempeño del lote para intervenir a tiempo.,Identify deviations in batch performance to intervene in time.,,Pendiente
+pigvision.features.[1].title,pigvision,Producto PigVision (/pigvision),Plataforma de monitoreo,Monitoring platform,,Pendiente
+pigvision.features.[1].text,pigvision,Producto PigVision (/pigvision),Visualiza el historial productivo del lote en una sola plataforma.,View the batch's productive history on a single platform.,,Pendiente
+pigvision.features.[2].title,pigvision,Producto PigVision (/pigvision),Proyección de peso y crecimiento,Weight and growth projection,,Pendiente
+pigvision.features.[2].text,pigvision,Producto PigVision (/pigvision),Anticipa el peso futuro de tus animales y mejora la planificación de salida.,Anticipate your animals' future weight and improve exit planning.,,Pendiente
+pigvision.diffImgAlt,pigvision,Producto PigVision (/pigvision),Granja porcina,Swine farm,,Pendiente
+pigvision.diffBadge1,pigvision,Producto PigVision (/pigvision),ROI productivo de hasta 8:1,Productive ROI of up to 8:1,,Pendiente
+pigvision.diffBadge2,pigvision,Producto PigVision (/pigvision),Diagnóstico remoto,Remote diagnostics,,Pendiente
+pigvision.diffSlides.[0].img,pigvision,Producto PigVision (/pigvision),/images/pigvision/pv_diff_01.jpg,/images/pigvision/pv_diff_01.jpg,,Pendiente
+pigvision.diffSlides.[0].title,pigvision,Producto PigVision (/pigvision),ROI productivo de hasta 8:1,Productive ROI of up to 8:1,,Pendiente
+pigvision.diffSlides.[0].text,pigvision,Producto PigVision (/pigvision),Convierte datos de peso en decisiones que impactan directamente la rentabilidad.,Turn weight data into decisions that directly impact profitability.,,Pendiente
+pigvision.diffSlides.[1].img,pigvision,Producto PigVision (/pigvision),/images/pigvision/pv_diff_02.jpg,/images/pigvision/pv_diff_02.jpg,,Pendiente
+pigvision.diffSlides.[1].title,pigvision,Producto PigVision (/pigvision),Diagnóstico remoto,Remote diagnostics,,Pendiente
+pigvision.diffSlides.[1].text,pigvision,Producto PigVision (/pigvision),Permite visualizar posibles lesiones en los animales y aseo en los corrales.,Lets you spot possible injuries in the animals and pen cleanliness.,,Pendiente
+pigvision.diffSlides.[2].img,pigvision,Producto PigVision (/pigvision),/images/pigvision/pv_diff_03.jpg,/images/pigvision/pv_diff_03.jpg,,Pendiente
+pigvision.diffSlides.[2].title,pigvision,Producto PigVision (/pigvision),Detección temprana de desviaciones,Early deviation detection,,Pendiente
+pigvision.diffSlides.[2].text,pigvision,Producto PigVision (/pigvision),Comprende el crecimiento por fases para ajustes oportunos.,Understand growth by phases for timely adjustments.,,Pendiente
+pigvision.comparison.rows.[0],pigvision,Producto PigVision (/pigvision),Función principal,Main function,,Pendiente
+pigvision.comparison.rows.[1],pigvision,Producto PigVision (/pigvision),Cómo utiliza los datos de PigVision,How it uses PigVision data,,Pendiente
+pigvision.comparison.rows.[2],pigvision,Producto PigVision (/pigvision),Tipo de dato utilizado,Type of data used,,Pendiente
+pigvision.comparison.columns.[0].title,pigvision,Producto PigVision (/pigvision),OPTIMARKET,OPTIMARKET,,Pendiente
+pigvision.comparison.columns.[0].cells.[0],pigvision,Producto PigVision (/pigvision),Optimiza el calendario de salida para maximizar rentabilidad.,Optimizes the shipping schedule to maximize profitability.,,Pendiente
+pigvision.comparison.columns.[0].cells.[1],pigvision,Producto PigVision (/pigvision),Toma el peso actual calculado por las cámaras y simula matemáticamente la curva de distribución de tamaños del lote para planear entregas escalonadas.,Takes the current weight calculated by the cameras and mathematically simulates the batch's size distribution curve to plan staggered deliveries.,,Pendiente
+pigvision.comparison.columns.[0].cells.[2],pigvision,Producto PigVision (/pigvision),Peso promedio del lote proyectado matemáticamente hacia el futuro.,Batch average weight mathematically projected into the future.,,Pendiente
+pigvision.comparison.columns.[1].title,pigvision,Producto PigVision (/pigvision),DASHBOARD DE PIGVISION,PIGVISION DASHBOARD,,Pendiente
+pigvision.comparison.columns.[1].cells.[0],pigvision,Producto PigVision (/pigvision),Es la plataforma central que consolida el rendimiento del lote y grafica el crecimiento de los animales en el tiempo.,It is the central platform that consolidates batch performance and charts the animals' growth over time.,,Pendiente
+pigvision.comparison.columns.[1].cells.[1],pigvision,Producto PigVision (/pigvision),"Traza curvas de crecimiento cruzando la edad de los animales con su peso, comparando automáticamente estos resultados frente a la meta de la guía genética.","Plots growth curves crossing the animals' age with their weight, automatically comparing these results against the genetic guide target.",,Pendiente
+pigvision.comparison.columns.[1].cells.[2],pigvision,Producto PigVision (/pigvision),Pesos promedios y datos de ganancia diaria.,Average weights and daily gain data.,,Pendiente
+insylo.pageLabel,insylo,Producto Insylo (/insylo),Insylo,Insylo,,Pendiente
+insylo.subtitle,insylo,Producto Insylo (/insylo),Sensor 3D para monitoreo de alimento en silos,3D sensor for feed monitoring in silos,,Pendiente
+insylo.range,insylo,Producto Insylo (/insylo),de hasta 12 metros.,up to 12 meters.,,Pendiente
+insylo.problemTitle,insylo,Producto Insylo (/insylo),El problema del monitoreo manual del silo,The problem with manual silo monitoring,,Pendiente
+insylo.problemImgAlt,insylo,Producto Insylo (/insylo),Silo metálico en paisaje montañoso,Metal silo in a mountainous landscape,,Pendiente
+insylo.problems.[0].bold,insylo,Producto Insylo (/insylo),Medición imprecisa,Imprecise measurement,,Pendiente
+insylo.problems.[0].rest,insylo,Producto Insylo (/insylo),de alimento dentro del silo,of feed inside the silo,,Pendiente
+insylo.problems.[1].bold,insylo,Producto Insylo (/insylo),Desabastecimiento,Unexpected,,Pendiente
+insylo.problems.[1].rest,insylo,Producto Insylo (/insylo),inesperado,stockouts,,Pendiente
+insylo.problems.[2].bold,insylo,Producto Insylo (/insylo),Visibilidad limitada,Limited visibility,,Pendiente
+insylo.problems.[2].rest,insylo,Producto Insylo (/insylo),del silo,of the silo,,Pendiente
+insylo.solutionSubtitle,insylo,Producto Insylo (/insylo),Monitoreo continuo del alimento en silo,Continuous monitoring of feed in the silo,,Pendiente
+insylo.solutionImgAltLeft,insylo,Producto Insylo (/insylo),Sensor Insylo instalado,Insylo sensor installed,,Pendiente
+insylo.solutionImgAltCenter,insylo,Producto Insylo (/insylo),Medición de grano en silo industrial,Grain measurement in an industrial silo,,Pendiente
+insylo.highlightTitle,insylo,Producto Insylo (/insylo),Alertas configurables,Configurable alerts,,Pendiente
+insylo.highlightText,insylo,Producto Insylo (/insylo),Recibe alertas cuando el nivel de alimento baja del umbral definido.,Receive alerts when the feed level drops below the defined threshold.,,Pendiente
+insylo.features.[0].title,insylo,Producto Insylo (/insylo),Medición automática,Automatic measurement,,Pendiente
+insylo.features.[0].text,insylo,Producto Insylo (/insylo),Mide el nivel de alimento sin inspecciones manuales.,Measure the feed level without manual inspections.,,Pendiente
+insylo.features.[1].title,insylo,Producto Insylo (/insylo),Datos en tiempo real,Real-time data,,Pendiente
+insylo.features.[1].text,insylo,Producto Insylo (/insylo),"Consulta el estado del silo en tiempo real, desde cualquier lugar.","Check the silo's status in real time, from anywhere.",,Pendiente
+insylo.features.[2].title,insylo,Producto Insylo (/insylo),Historial y consumo,History and consumption,,Pendiente
+insylo.features.[2].text,insylo,Producto Insylo (/insylo),Analiza el consumo de alimento a lo largo del tiempo desde la plataforma.,Analyze feed consumption over time from the platform.,,Pendiente
+insylo.diffImgAlt,insylo,Producto Insylo (/insylo),Silo lleno de alimento animal,Silo full of animal feed,,Pendiente
+insylo.diffBadge1,insylo,Producto Insylo (/insylo),Monitoreo ambiental del silo,Environmental monitoring of the silo,,Pendiente
+insylo.diffBlockTitle,insylo,Producto Insylo (/insylo),Topografía 3D del alimento,3D topography of the feed,,Pendiente
+insylo.diffBlockText,insylo,Producto Insylo (/insylo),Visualiza cómo se distribuye realmente el alimento dentro del silo.,Visualize how the feed is really distributed inside the silo.,,Pendiente
+insylo.diffBadge2,insylo,Producto Insylo (/insylo),Proyección de consumo,Consumption projection,,Pendiente
+insylo.diffSlides.[0].img,insylo,Producto Insylo (/insylo),/images/insylo/is_diff_01.jpg,/images/insylo/is_diff_01.jpg,,Pendiente
+insylo.diffSlides.[0].title,insylo,Producto Insylo (/insylo),Topografía 3D del alimento,3D topography of the feed,,Pendiente
+insylo.diffSlides.[0].text,insylo,Producto Insylo (/insylo),Visualiza cómo se distribuye realmente el alimento dentro del silo.,Visualize how the feed is really distributed inside the silo.,,Pendiente
+insylo.diffSlides.[1].img,insylo,Producto Insylo (/insylo),/images/insylo/is_diff_02.jpg,/images/insylo/is_diff_02.jpg,,Pendiente
+insylo.diffSlides.[1].title,insylo,Producto Insylo (/insylo),Monitoreo ambiental del silo,Environmental monitoring of the silo,,Pendiente
+insylo.diffSlides.[1].text,insylo,Producto Insylo (/insylo),Revisa temperatura y humedad para proteger la calidad del alimento.,Check temperature and humidity to protect feed quality.,,Pendiente
+insylo.diffSlides.[2].img,insylo,Producto Insylo (/insylo),/images/insylo/is_diff_03.jpg,/images/insylo/is_diff_03.jpg,,Pendiente
+insylo.diffSlides.[2].title,insylo,Producto Insylo (/insylo),Proyección de consumo del silo,Silo consumption projection,,Pendiente
+insylo.diffSlides.[2].text,insylo,Producto Insylo (/insylo),Anticipa cuándo será necesario reabastecer según el comportamiento del alimento.,Anticipate when restocking will be needed based on feed behavior.,,Pendiente
+insylo.comparison.rows.[0],insylo,Producto Insylo (/insylo),Función principal,Main function,,Pendiente
+insylo.comparison.rows.[1],insylo,Producto Insylo (/insylo),Cómo utiliza los datos de Insylo,How it uses Insylo data,,Pendiente
+insylo.comparison.rows.[2],insylo,Producto Insylo (/insylo),Tipo de dato utilizado,Type of data used,,Pendiente
+insylo.comparison.columns.[0].title,insylo,Producto Insylo (/insylo),ECONOMETRIX,ECONOMETRIX,,Pendiente
+insylo.comparison.columns.[0].cells.[0],insylo,Producto Insylo (/insylo),Simulador predictivo que genera estados de resultados financieros.,Predictive simulator that generates financial income statements.,,Pendiente
+insylo.comparison.columns.[0].cells.[1],insylo,Producto Insylo (/insylo),Cruza el dato exacto del consumo de alimento de la granja con los costos operativos para modelar matemáticamente cómo esto impacta en el margen de rentabilidad.,Crosses the exact feed consumption data of the farm with operating costs to mathematically model how this impacts the profit margin.,,Pendiente
+insylo.comparison.columns.[0].cells.[2],insylo,Producto Insylo (/insylo),Niveles de llenado del silo.,Silo fill levels.,,Pendiente
+insylo.comparison.columns.[1].title,insylo,Producto Insylo (/insylo),DASHBOARD DE INSYLO,INSYLO DASHBOARD,,Pendiente
+insylo.comparison.columns.[1].cells.[0],insylo,Producto Insylo (/insylo),Es la interfaz gráfica para que el productor visualice y controle el inventario de alimento en su granja.,It is the graphical interface for the producer to view and control the feed inventory on their farm.,,Pendiente
+insylo.comparison.columns.[1].cells.[1],insylo,Producto Insylo (/insylo),Presenta gráficamente las mediciones de volumen de alimento para que el usuario vigile el abastecimiento y el consumo en tiempo real.,Graphically presents feed volume measurements so the user can monitor supply and consumption in real time.,,Pendiente
+insylo.comparison.columns.[1].cells.[2],insylo,Producto Insylo (/insylo),Niveles exactos de llenado de los silos capturados por el sensor.,Exact silo fill levels captured by the sensor.,,Pendiente
+nodos.pageLabel,nodos,Producto Sensores Ambientales (/nodos),Sensores ambientales,Environmental sensors,,Pendiente
+nodos.title1,nodos,Producto Sensores Ambientales (/nodos),Nodos,Environmental,,Pendiente
+nodos.title2,nodos,Producto Sensores Ambientales (/nodos),ambientales,nodes,,Pendiente
+nodos.subtitle,nodos,Producto Sensores Ambientales (/nodos),"Sensores para monitorear
+el ambiente de la granja","Sensors that monitor
+the farm environment",,Pendiente
+nodos.tagline,nodos,Producto Sensores Ambientales (/nodos),"Temperatura, humedad, CO₂ y luz bajo control.","Temperature, humidity, CO₂ and light under control.",,Pendiente
+nodos.problemTitle,nodos,Producto Sensores Ambientales (/nodos),El problema del monitoreo ambiental manual,The problem with manual environmental monitoring,,Pendiente
+nodos.problemImgAlt,nodos,Producto Sensores Ambientales (/nodos),Galpón avícola,Poultry house,,Pendiente
+nodos.problems.[0].bold,nodos,Producto Sensores Ambientales (/nodos),Datos medioambientales,Environmental data,,Pendiente
+nodos.problems.[0].rest,nodos,Producto Sensores Ambientales (/nodos),subestimados,underestimated,,Pendiente
+nodos.problems.[1].bold,nodos,Producto Sensores Ambientales (/nodos),Cambios ambientales,Environmental changes,,Pendiente
+nodos.problems.[1].rest,nodos,Producto Sensores Ambientales (/nodos),que pasan desapercibidos,that go unnoticed,,Pendiente
+nodos.problems.[2].bold,nodos,Producto Sensores Ambientales (/nodos),Intervenciones,Late,,Pendiente
+nodos.problems.[2].rest,nodos,Producto Sensores Ambientales (/nodos),tardías,interventions,,Pendiente
+nodos.solutionSubtitle,nodos,Producto Sensores Ambientales (/nodos),Monitoreo continuo de las condiciones ambientales,Continuous monitoring of environmental conditions,,Pendiente
+nodos.solutionImgAltLeft,nodos,Producto Sensores Ambientales (/nodos),Nodo ambiental instalado,Environmental node installed,,Pendiente
+nodos.solutionImgAltCenter,nodos,Producto Sensores Ambientales (/nodos),Nodos ambientales,Environmental nodes,,Pendiente
+nodos.highlightTitle1,nodos,Producto Sensores Ambientales (/nodos),Plataforma,Analytics,,Pendiente
+nodos.highlightTitle2,nodos,Producto Sensores Ambientales (/nodos),de análisis,platform,,Pendiente
+nodos.highlightText,nodos,Producto Sensores Ambientales (/nodos),"Visualiza cambios, identifica patrones y entiende la evolución del ambiente a través de datos centralizados en una sola plataforma.","Visualize changes, identify patterns and understand the evolution of the environment through data centralized in a single platform.",,Pendiente
+nodos.features.[0].title,nodos,Producto Sensores Ambientales (/nodos),Monitoreo continuo,Continuous monitoring,,Pendiente
+nodos.features.[0].text,nodos,Producto Sensores Ambientales (/nodos),"Monitorea temperatura, humedad y gases dentro del galpón durante todo el día.","Monitor temperature, humidity and gases inside the house all day long.",,Pendiente
+nodos.features.[1].title,nodos,Producto Sensores Ambientales (/nodos),Alertas configurables,Configurable alerts,,Pendiente
+nodos.features.[1].text,nodos,Producto Sensores Ambientales (/nodos),Recibe alertas cuando una condición ambiental sale del rango definido.,Receive alerts when an environmental condition falls outside the defined range.,,Pendiente
+nodos.features.[2].title,nodos,Producto Sensores Ambientales (/nodos),Ambiente más seguro para el trabajo,A safer environment for work,,Pendiente
+nodos.features.[2].text,nodos,Producto Sensores Ambientales (/nodos),Supervisa la calidad del aire y mantén condiciones adecuadas para animales dentro del galpón.,Monitor air quality and maintain suitable conditions for animals inside the house.,,Pendiente
+nodos.diffImgAlt,nodos,Producto Sensores Ambientales (/nodos),Galpón con nodos ambientales,Poultry house with environmental nodes,,Pendiente
+nodos.diffBadge1,nodos,Producto Sensores Ambientales (/nodos),Lecturas distribuidas en el galpón,Readings distributed across the house,,Pendiente
+nodos.diffBlockTitle,nodos,Producto Sensores Ambientales (/nodos),Sensores configurables según la necesidad,Sensors configurable to your needs,,Pendiente
+nodos.diffBlockText,nodos,Producto Sensores Ambientales (/nodos),Adapta la medición de variables ambientales según las necesidades específicas de cada granja.,Adapt the measurement of environmental variables to the specific needs of each farm.,,Pendiente
+nodos.diffBadge2,nodos,Producto Sensores Ambientales (/nodos),Proyección de consumo,Consumption projection,,Pendiente
+nodos.diffSlides.[0].img,nodos,Producto Sensores Ambientales (/nodos),/images/nodos/nd_diff_01.jpg,/images/nodos/nd_diff_01.jpg,,Pendiente
+nodos.diffSlides.[0].title,nodos,Producto Sensores Ambientales (/nodos),Sensores configurables según la necesidad,Sensors configurable to your needs,,Pendiente
+nodos.diffSlides.[0].text,nodos,Producto Sensores Ambientales (/nodos),Adapta la medición de variables ambientales según las necesidades específicas de cada granja.,Adapt the measurement of environmental variables to the specific needs of each farm.,,Pendiente
+nodos.diffSlides.[1].img,nodos,Producto Sensores Ambientales (/nodos),/images/nodos/nd_diff_02.jpg,/images/nodos/nd_diff_02.jpg,,Pendiente
+nodos.diffSlides.[1].title,nodos,Producto Sensores Ambientales (/nodos),Lecturas distribuidas en el galpón,Readings distributed across the house,,Pendiente
+nodos.diffSlides.[1].text,nodos,Producto Sensores Ambientales (/nodos),Permite monitorear condiciones en diferentes puntos para entender mejor lo que ocurre dentro del ambiente productivo.,Monitor conditions at different points to better understand what happens inside the productive environment.,,Pendiente
+nodos.diffSlides.[2].img,nodos,Producto Sensores Ambientales (/nodos),/images/nodos/nd_diff_03.jpg,/images/nodos/nd_diff_03.jpg,,Pendiente
+nodos.diffSlides.[2].title,nodos,Producto Sensores Ambientales (/nodos),Arquitectura escalable por granja,Scalable architecture per farm,,Pendiente
+nodos.diffSlides.[2].text,nodos,Producto Sensores Ambientales (/nodos),Instala múltiples sensores según el tamaño del galpón y el nivel de monitoreo que necesitas.,Install multiple sensors based on the size of the house and the level of monitoring you need.,,Pendiente
+nodos.comparison.rows.[0],nodos,Producto Sensores Ambientales (/nodos),Función principal,Main function,,Pendiente
+nodos.comparison.rows.[1],nodos,Producto Sensores Ambientales (/nodos),Cómo utiliza los datos de Nodos,How it uses Nodes data,,Pendiente
+nodos.comparison.rows.[2],nodos,Producto Sensores Ambientales (/nodos),Tipo de dato utilizado,Type of data used,,Pendiente
+nodos.comparison.columns.[0].title,nodos,Producto Sensores Ambientales (/nodos),DASHBOARD DE GRANJA,FARM DASHBOARD,,Pendiente
+nodos.comparison.columns.[0].cells.[0],nodos,Producto Sensores Ambientales (/nodos),Es un panel de control diseñado para visualizar el comportamiento climático del galpón cada 15 minutos.,It is a control panel designed to visualize the house's climate behavior every 15 minutes.,,Pendiente
+nodos.comparison.columns.[0].cells.[1],nodos,Producto Sensores Ambientales (/nodos),Recibe la información mediante una conexión de streaming continuo en la nube para graficar las variables y permitir la detección precisa de picos máximos y mínimos.,Receives the information through a continuous cloud streaming connection to chart the variables and enable precise detection of maximum and minimum peaks.,,Pendiente
+nodos.comparison.columns.[0].cells.[2],nodos,Producto Sensores Ambientales (/nodos),Variables medioambientales.,Environmental variables.,,Pendiente
+saber.title,saber,El poder del saber (/poder-del-saber),El poder del saber,The power of knowing,,Pendiente
+saber.subtitle,saber,El poder del saber (/poder-del-saber),"Información técnica, análisis y datos que explican cómo
+el monitoreo continuo mejora la rentabilidad en granja.","Technical information, analysis and data that explain how
+continuous monitoring improves farm profitability.",,Pendiente
+saber.featureTitle1,saber,El poder del saber (/poder-del-saber),Ciencias,Sciences,,Pendiente
+saber.featureTitle2,saber,El poder del saber (/poder-del-saber),de la innovación,of innovation,,Pendiente
+saber.featureAlt,saber,El poder del saber (/poder-del-saber),Ciencias de la innovación,Sciences of innovation,,Pendiente
+saber.featureText,saber,El poder del saber (/poder-del-saber),Estudio sobre la implementación de PigVision en granjas porcinas y su impacto en la toma de decisiones. Presenta resultados reales de productividad y eficiencia basados en datos.,Study on the implementation of PigVision on swine farms and its impact on decision-making. It presents real productivity and efficiency results based on data.,,Pendiente
+saber.featureDate,saber,El poder del saber (/poder-del-saber),Diciembre 2025,December 2025,,Pendiente
+saber.revistas.[0].title,saber,El poder del saber (/poder-del-saber),Revista digital: BM Editores,Digital magazine: BM Editores,,Pendiente
+saber.revistas.[0].text,saber,El poder del saber (/poder-del-saber),Cómo PigVision mejora el control del crecimiento porcino con datos en granja.,How PigVision improves swine growth control with on-farm data.,,Pendiente
+saber.revistas.[0].date,saber,El poder del saber (/poder-del-saber),Febrero 2025,February 2025,,Pendiente
+saber.revistas.[0].url,saber,El poder del saber (/poder-del-saber),https://bmeditores.mx/porcicultura/asimetrix-marca-la-diferencia-en-control-de-crecimiento-porcino/,https://bmeditores.mx/porcicultura/asimetrix-marca-la-diferencia-en-control-de-crecimiento-porcino/,,Pendiente
+saber.revistas.[1].title,saber,El poder del saber (/poder-del-saber),Revista digital: Pig progress,Digital magazine: Pig progress,,Pendiente
+saber.revistas.[1].text,saber,El poder del saber (/poder-del-saber),Actualización de tendencias globales en porcicultura y dinámica del mercado.,Update on global trends in pig farming and market dynamics.,,Pendiente
+saber.revistas.[1].date,saber,El poder del saber (/poder-del-saber),Marzo 2025,March 2025,,Pendiente
+saber.revistas.[1].url,saber,El poder del saber (/poder-del-saber),https://www.pigprogress.net/market-trends-analysis-the-industrymarkets/wrapping-up-february-whats-new-in-the-world-of-pigs-7/,https://www.pigprogress.net/market-trends-analysis-the-industrymarkets/wrapping-up-february-whats-new-in-the-world-of-pigs-7/,,Pendiente
+saber.ncsuTitle,saber,El poder del saber (/poder-del-saber),"Estudio realizado por NCSU
+sobre el funcionamiento de PigVision","Study conducted by NCSU
+on how PigVision works",,Pendiente
+saber.ncsuRenderAlt,saber,El poder del saber (/poder-del-saber),PigVision,PigVision,,Pendiente
+saber.ncsuLogoAlt,saber,El poder del saber (/poder-del-saber),NC State University,NC State University,,Pendiente
+saber.ncsuText,saber,El poder del saber (/poder-del-saber),"Evaluación precisa y rápida del peso en cerdos de engorde, validada frente a métodos tradicionales en granja.","Accurate and fast weight assessment in finishing pigs, validated against traditional on-farm methods.",,Pendiente
+cotizar.pageLabel,cotizar,Formulario Cotizar (/cotizar),Cotizar,Get a quote,,Pendiente
+cotizar.heroTitle1,cotizar,Formulario Cotizar (/cotizar),Cuéntanos sobre,Tell us about,,Pendiente
+cotizar.heroTitle2,cotizar,Formulario Cotizar (/cotizar),tu operación,your operation,,Pendiente
+cotizar.heroTitle3,cotizar,Formulario Cotizar (/cotizar),,,,Pendiente
+cotizar.heroSubtitle.[0],cotizar,Formulario Cotizar (/cotizar),Sabemos lo que cuesta decidir sin datos.,We know what it costs to decide without data.,,Pendiente
+cotizar.heroSubtitle.[1],cotizar,Formulario Cotizar (/cotizar),"Cuéntanos qué pasa en tu granja y
+te ayudamos a encontrar la mejor solución.","Tell us what's happening on your farm and
+we'll help you find the best solution.",,Pendiente
+cotizar.introTitle,cotizar,Formulario Cotizar (/cotizar),"Completa la información
+y te contactaremos","Fill in the information
+and we'll contact you",,Pendiente
+cotizar.introSubtitle,cotizar,Formulario Cotizar (/cotizar),con una solución personalizada.,with a personalized solution.,,Pendiente
+cotizar.section1,cotizar,Formulario Cotizar (/cotizar),Tu información de contacto,Your contact information,,Pendiente
+cotizar.fields.nameLabel,cotizar,Formulario Cotizar (/cotizar),Nombre y apellido,Full name,,Pendiente
+cotizar.fields.namePlaceholder,cotizar,Formulario Cotizar (/cotizar),Juan Pérez,John Smith,,Pendiente
+cotizar.fields.companyLabel,cotizar,Formulario Cotizar (/cotizar),Empresa / Granja,Company / Farm,,Pendiente
+cotizar.fields.companyPlaceholder,cotizar,Formulario Cotizar (/cotizar),Granja San José,San José Farm,,Pendiente
+cotizar.fields.locationLabel,cotizar,Formulario Cotizar (/cotizar),País/ciudad,Country/city,,Pendiente
+cotizar.fields.locationPlaceholder,cotizar,Formulario Cotizar (/cotizar),"Colombia, Medellín","Colombia, Medellín",,Pendiente
+cotizar.fields.emailLabel,cotizar,Formulario Cotizar (/cotizar),Correo electrónico,Email,,Pendiente
+cotizar.fields.emailPlaceholder,cotizar,Formulario Cotizar (/cotizar),juan@granja.com,john@farm.com,,Pendiente
+cotizar.fields.phoneLabel,cotizar,Formulario Cotizar (/cotizar),WhatsApp/teléfono,WhatsApp/phone,,Pendiente
+cotizar.fields.phonePlaceholder,cotizar,Formulario Cotizar (/cotizar),+57 300 123 4567,+57 300 123 4567,,Pendiente
+cotizar.section2,cotizar,Formulario Cotizar (/cotizar),Sobre tu producción,About your production,,Pendiente
+cotizar.prodTypeLabel,cotizar,Formulario Cotizar (/cotizar),Tipo de producción,Type of production,,Pendiente
+cotizar.prodTypes.[0],cotizar,Formulario Cotizar (/cotizar),Porcicultura,Swine,,Pendiente
+cotizar.prodTypes.[1],cotizar,Formulario Cotizar (/cotizar),Avicultura · engorde,Poultry · broilers,,Pendiente
+cotizar.prodTypes.[2],cotizar,Formulario Cotizar (/cotizar),Ponedoras,Layers,,Pendiente
+cotizar.prodTypes.[3],cotizar,Formulario Cotizar (/cotizar),Ganadería,Cattle,,Pendiente
+cotizar.prodTypes.[4],cotizar,Formulario Cotizar (/cotizar),Otra,Other,,Pendiente
+cotizar.animalCountLabel,cotizar,Formulario Cotizar (/cotizar),Cantidad de animales,Number of animals,,Pendiente
+cotizar.animalCounts.[0],cotizar,Formulario Cotizar (/cotizar),1-1000,1-1000,,Pendiente
+cotizar.animalCounts.[1],cotizar,Formulario Cotizar (/cotizar),1000-10.000,"1000-10,000",,Pendiente
+cotizar.animalCounts.[2],cotizar,Formulario Cotizar (/cotizar),+10.000,"+10,000",,Pendiente
+cotizar.section3,cotizar,Formulario Cotizar (/cotizar),Solución que estás buscando,The solution you're looking for,,Pendiente
+cotizar.solutions.[0].abbr,cotizar,Formulario Cotizar (/cotizar),PV,PV,,Pendiente
+cotizar.solutions.[0].name,cotizar,Formulario Cotizar (/cotizar),PigVision,PigVision,,Pendiente
+cotizar.solutions.[0].desc,cotizar,Formulario Cotizar (/cotizar),Estimación del peso de tus cerdos,Weight estimation for your pigs,,Pendiente
+cotizar.solutions.[1].abbr,cotizar,Formulario Cotizar (/cotizar),SW,SW,,Pendiente
+cotizar.solutions.[1].name,cotizar,Formulario Cotizar (/cotizar),SmartWeight,SmartWeight,,Pendiente
+cotizar.solutions.[1].desc,cotizar,Formulario Cotizar (/cotizar),Monitoreo del peso promedio de tus aves,Average weight monitoring for your birds,,Pendiente
+cotizar.solutions.[2].abbr,cotizar,Formulario Cotizar (/cotizar),IS,IS,,Pendiente
+cotizar.solutions.[2].name,cotizar,Formulario Cotizar (/cotizar),Insylo,Insylo,,Pendiente
+cotizar.solutions.[2].desc,cotizar,Formulario Cotizar (/cotizar),Inventario del alimento en silo,Feed inventory in the silo,,Pendiente
+cotizar.solutions.[3].abbr,cotizar,Formulario Cotizar (/cotizar),NA,NA,,Pendiente
+cotizar.solutions.[3].name,cotizar,Formulario Cotizar (/cotizar),Sensores ambientales,Environmental sensors,,Pendiente
+cotizar.solutions.[3].desc,cotizar,Formulario Cotizar (/cotizar),Monitoreo de confort animal,Animal comfort monitoring,,Pendiente
+cotizar.solutions.[4].abbr,cotizar,Formulario Cotizar (/cotizar),?,?,,Pendiente
+cotizar.solutions.[4].name,cotizar,Formulario Cotizar (/cotizar),No estoy seguro · asesoría,Not sure · advisory,,Pendiente
+cotizar.solutions.[4].desc,cotizar,Formulario Cotizar (/cotizar),Ayúdame a elegir la mejor opción,Help me choose the best option,,Pendiente
+cotizar.section4,cotizar,Formulario Cotizar (/cotizar),Nivel de digitalización,Level of digitalization,,Pendiente
+cotizar.digLabel,cotizar,Formulario Cotizar (/cotizar),Nivel de digitalización,Level of digitalization,,Pendiente
+cotizar.digLevels.[0],cotizar,Formulario Cotizar (/cotizar),Todo manual,All manual,,Pendiente
+cotizar.digLevels.[1],cotizar,Formulario Cotizar (/cotizar),Algunos registros digitales,Some digital records,,Pendiente
+cotizar.digLevels.[2],cotizar,Formulario Cotizar (/cotizar),Sensores o automatización,Sensors or automation,,Pendiente
+cotizar.digLevels.[3],cotizar,Formulario Cotizar (/cotizar),Optimizando con datos,Optimizing with data,,Pendiente
+cotizar.section5,cotizar,Formulario Cotizar (/cotizar),¿Qué pasa hoy en tu operación?,What's happening in your operation today?,,Pendiente
+cotizar.messageLabel,cotizar,Formulario Cotizar (/cotizar),Mensaje,Message,,Pendiente
+cotizar.messagePlaceholder,cotizar,Formulario Cotizar (/cotizar),"Cuéntanos sobre tus desafíos actuales, necesidades específicas o qué te gustaría mejorar...","Tell us about your current challenges, specific needs or what you'd like to improve...",,Pendiente
+cotizar.privacy,cotizar,Formulario Cotizar (/cotizar),"Al enviar este formulario, aceptas nuestra política de privacidad y el uso de tus datos para contactarte con información relevante sobre nuestras soluciones.","By submitting this form, you accept our privacy policy and the use of your data to contact you with relevant information about our solutions.",,Pendiente
+cotizar.trust,cotizar,Formulario Cotizar (/cotizar),Respondemos en menos de 72 horas. Sin spam.,We reply within 72 hours. No spam.,,Pendiente
+cotizar.submit,cotizar,Formulario Cotizar (/cotizar),Enviar para mejorar mi operación,Submit to improve my operation,,Pendiente
+cotizar.submitting,cotizar,Formulario Cotizar (/cotizar),Enviando...,Sending...,,Pendiente
+cotizar.successEyebrow,cotizar,Formulario Cotizar (/cotizar),Todo listo,All set,,Pendiente
+cotizar.successHeading,cotizar,Formulario Cotizar (/cotizar),¡Gracias por escribirnos!,Thanks for reaching out!,,Pendiente
+cotizar.successMsg,cotizar,Formulario Cotizar (/cotizar),Recibimos tu información y nuestro equipo te contactará en menos de 72 horas.,We received your information and our team will get back to you within 72 hours.,,Pendiente
+cotizar.successHint,cotizar,Formulario Cotizar (/cotizar),"Mientras tanto, sigue explorando el ecosistema Asimetrix.","In the meantime, keep exploring the Asimetrix ecosystem.",,Pendiente
+cotizar.successHome,cotizar,Formulario Cotizar (/cotizar),Volver al inicio,Back to home,,Pendiente
+cotizar.successProducts,cotizar,Formulario Cotizar (/cotizar),Ver productos,See products,,Pendiente
+cotizar.errorMsg,cotizar,Formulario Cotizar (/cotizar),Hubo un problema al enviar. Inténtalo de nuevo o escríbenos directamente.,There was a problem submitting. Please try again or contact us directly.,,Pendiente
+cotizar.errorMsgNetwork,cotizar,Formulario Cotizar (/cotizar),No pudimos conectar con el servidor. Revisa tu conexión e inténtalo de nuevo.,We couldn't reach the server. Check your connection and try again.,,Pendiente
+cotizar.errorMsgServer,cotizar,Formulario Cotizar (/cotizar),El servidor tuvo un problema procesando tu solicitud. Intenta más tarde.,The server had an issue processing your request. Please try again later.,,Pendiente
+cotizar.errorMsgValidation,cotizar,Formulario Cotizar (/cotizar),Revisa los campos marcados en rojo antes de enviar.,Please review the fields marked in red before submitting.,,Pendiente
+cotizar.requiredError,cotizar,Formulario Cotizar (/cotizar),Por favor completa tu nombre y correo electrónico.,Please complete your name and email.,,Pendiente
+cotizar.fieldRequired,cotizar,Formulario Cotizar (/cotizar),Este campo es obligatorio.,This field is required.,,Pendiente
+cotizar.invalidEmail,cotizar,Formulario Cotizar (/cotizar),Por favor ingresa un correo válido.,Please enter a valid email.,,Pendiente
+cotizar.invalidPhone,cotizar,Formulario Cotizar (/cotizar),Ingresa un número de teléfono válido.,Please enter a valid phone number.,,Pendiente
+cotizar.phoneOnlyDigits,cotizar,Formulario Cotizar (/cotizar),"Sólo se permiten números, +, espacios, guiones y paréntesis.","Only numbers, +, spaces, dashes and parentheses are allowed.",,Pendiente
+cotizar.contactTitle,cotizar,Formulario Cotizar (/cotizar),¿Prefieres hablar directamente con nosotros?,Prefer to talk to us directly?,,Pendiente
+cotizar.whatsapp,cotizar,Formulario Cotizar (/cotizar),WhatsApp,WhatsApp,,Pendiente
+cotizar.whatsappValue,cotizar,Formulario Cotizar (/cotizar),+57 300 123 4567,+57 300 123 4567,,Pendiente
+cotizar.emailContact,cotizar,Formulario Cotizar (/cotizar),Correo,Email,,Pendiente
+cotizar.emailValue,cotizar,Formulario Cotizar (/cotizar),contacto@asimetrix.co,contacto@asimetrix.co,,Pendiente
+cotizar.demo,cotizar,Formulario Cotizar (/cotizar),Agendar demo,Schedule a demo,,Pendiente
+cotizar.demoValue,cotizar,Formulario Cotizar (/cotizar),30 min · videollamada,30 min · video call,,Pendiente
+cookies.message,cookies,CookieBanner,"Al hacer clic en «Aceptar todas las cookies», aceptas el almacenamiento de cookies en tu dispositivo para mejorar la navegación, analizar el uso del sitio y apoyar nuestras iniciativas de marketing.","By clicking “Accept all cookies,” you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and support our marketing efforts.",,Pendiente
+cookies.settings,cookies,CookieBanner,Configurar cookies,Cookie settings,,Pendiente
+cookies.acceptAll,cookies,CookieBanner,Aceptar todas las cookies,Accept all cookies,,Pendiente
+cookies.rejectAll,cookies,CookieBanner,Rechazar,Reject,,Pendiente
+cookies.settingsTitle,cookies,CookieBanner,Preferencias de cookies,Cookie preferences,,Pendiente
+cookies.settingsIntro,cookies,CookieBanner,Usamos cookies para mejorar tu experiencia. Elige qué categorías permites.,We use cookies to improve your experience. Choose which categories you allow.,,Pendiente
+cookies.catNecessaryTitle,cookies,CookieBanner,Necesarias,Necessary,,Pendiente
+cookies.catNecessaryDesc,cookies,CookieBanner,Requeridas para el funcionamiento básico del sitio. No se pueden desactivar.,Required for basic site functionality. Cannot be disabled.,,Pendiente
+cookies.catAnalyticsTitle,cookies,CookieBanner,Analíticas,Analytics,,Pendiente
+cookies.catAnalyticsDesc,cookies,CookieBanner,Nos ayudan a entender cómo se usa el sitio para mejorarlo.,Help us understand how the site is used so we can improve it.,,Pendiente
+cookies.catMarketingTitle,cookies,CookieBanner,Marketing,Marketing,,Pendiente
+cookies.catMarketingDesc,cookies,CookieBanner,Permiten mostrar contenido y anuncios más relevantes.,Allow us to show more relevant content and ads.,,Pendiente
+cookies.save,cookies,CookieBanner,Guardar preferencias,Save preferences,,Pendiente
+cookies.cancel,cookies,CookieBanner,Cancelar,Cancel,,Pendiente
