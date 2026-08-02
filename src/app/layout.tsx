@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { OnixButton } from "@/components/OnixButton";
+import { CookieBannerPreview } from "@/components/CookieBannerPreview";
 import { LanguageProvider } from "@/i18n/context";
 
 const inter = Inter({
@@ -30,6 +31,8 @@ export default function RootLayout({
         <LanguageProvider>
           {children}
           <OnixButton />
+          
+          <CookieBannerPreview />
         </LanguageProvider>
       </body>
     </html>

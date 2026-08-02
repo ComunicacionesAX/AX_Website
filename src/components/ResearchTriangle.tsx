@@ -10,15 +10,23 @@ export function ResearchTriangle() {
       <div className="container-x">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <p className="font-display text-2xl font-light text-navy/80 sm:text-3xl">
+            
+            <p className="font-display text-3xl font-light text-navy/80 sm:text-4xl">
               {t.research.pre}
             </p>
-            <h2 className="section-title mt-1">{t.research.title}</h2>
-            <p className="mt-1 font-display text-2xl font-light text-navy/80 sm:text-3xl">
+            
+            <h2 className="mt-1 font-display font-bold leading-[1.05] tracking-tight text-navy text-4xl sm:text-5xl lg:text-subhead">
+              {t.research.title}
+            </h2>
+            {/* "Carolina del Norte" — mismo tratamiento que el eyebrow
+                arriba. Cierra el bloque de heading. */}
+            <p className="mt-2 font-display text-3xl font-light text-navy/80 sm:text-4xl">
               {t.research.post}
             </p>
 
-            <div className="mt-8 max-w-md space-y-4 text-lg leading-relaxed text-muted">
+            {/* Body — sube de text-lg (18px) a text-xl (20px) matcheando
+                la referencia. leading-relaxed conserva la respiración. */}
+            <div className="mt-10 max-w-md space-y-5 text-xl leading-relaxed text-muted">
               <p>{t.research.p1}</p>
               <p>{t.research.p2}</p>
             </div>

@@ -4,6 +4,8 @@ import Image from "next/image";
 import { Plus } from "lucide-react";
 import { useI18n } from "@/i18n/context";
 import { NCSU_STUDY_URL, INNOVACION_STUDY_URL } from "@/lib/links";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { RelatedProducts } from "@/components/RelatedProducts";
 
 const revistaImgs = [
   "/images/saber/saber_bmeditores.webp",
@@ -15,19 +17,17 @@ export function SaberPage() {
   const s = t.saber;
   const revistas = s.revistas.map((r, i) => ({ ...r, img: revistaImgs[i] }));
   return (
-    <div className="bg-gradient-to-b from-sky-50 via-white to-sky-50">
-      {/* Hero — full-bleed azul hasta arriba, como el resto de las landings */}
-      <section
-        className="on-dark relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden rounded-b-[2.5rem] px-8 pb-20 pt-44 text-center text-white"
-        style={{
-          backgroundImage:
-            "linear-gradient(135deg, #97f4ff 0%, #005980 45%, #040939 100%)",
-        }}
-      >
-        <h1 className="font-display text-5xl font-medium leading-tight tracking-tight sm:text-7xl lg:text-8xl">
+    <div className="bg-white">
+      <Breadcrumbs current={s.title} />
+      {/* Hero — gradient vertical midnight → teal. El midnight del top del
+          gradient hace match con el breadcrumb navy translúcido pegado arriba. */}
+      <section className="bg-hero on-dark relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden rounded-b-3xl px-8 pb-24 pt-32 text-center text-white sm:pt-40">
+        {/* Título con text-hero-sm (clamp 3rem→6rem) — token DS oficial
+            para heroes de páginas internas. Reemplaza escala hardcoded. */}
+        <h1 className="font-display text-hero-sm font-light tracking-tight">
           {s.title}
         </h1>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/90 sm:text-2xl">
+        <p className="mt-6 max-w-3xl whitespace-pre-line text-pretty font-display text-xl font-light leading-relaxed text-white/90 sm:text-2xl">
           {s.subtitle}
         </p>
       </section>
@@ -35,12 +35,12 @@ export function SaberPage() {
       {/* Grid de contenidos */}
       <section className="container-x py-16">
         <div className="grid gap-6 lg:grid-cols-[1.9fr_1fr]">
-          {/* Feature card */}
+          
           <a
             href={INNOVACION_STUDY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative block min-h-[420px] overflow-hidden rounded-[30px]"
+            className="group relative block min-h-[520px] overflow-hidden rounded-[30px] shadow-lg shadow-navy/10 transition duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-navy/25 lg:min-h-[640px]"
           >
             <Image
               src="/images/saber/saber_ciencias.webp"
@@ -50,19 +50,19 @@ export function SaberPage() {
               className="object-cover transition duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent" />
-            <span className="absolute right-6 top-6 flex h-11 w-11 items-center justify-center rounded-full bg-cyan text-navy">
+            <span className="absolute right-6 top-6 flex h-11 w-11 items-center justify-center rounded-full bg-cyan text-navy transition-transform duration-300 group-hover:scale-110">
               <Plus className="h-6 w-6" />
             </span>
-            <div className="absolute inset-x-0 bottom-0 p-8 text-white">
-              <h3 className="font-display text-4xl font-medium leading-tight sm:text-5xl">
+            <div className="absolute inset-x-0 bottom-0 p-8 text-white sm:p-10">
+              <h3 className="text-balance font-display font-bold leading-[1.1] tracking-tight text-3xl sm:text-4xl lg:text-5xl">
                 {s.featureTitle1}
                 <br />
                 {s.featureTitle2}
               </h3>
-              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-white/85">
+              <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-white/90 sm:text-xl">
                 {s.featureText}
               </p>
-              <span className="mt-4 inline-block rounded-full bg-white/25 px-5 py-2 text-sm font-medium backdrop-blur-sm">
+              <span className="mt-6 inline-block rounded-full border border-white/30 bg-white/15 px-5 py-2 text-base font-medium backdrop-blur-md">
                 {s.featureDate}
               </span>
             </div>
@@ -79,7 +79,7 @@ export function SaberPage() {
                   {...(url
                     ? { href: url, target: "_blank", rel: "noopener noreferrer" }
                     : {})}
-                  className="group relative block min-h-[135px] flex-1 overflow-hidden rounded-[30px]"
+                  className="group relative block min-h-[300px] flex-1 overflow-hidden rounded-[30px] shadow-md shadow-navy/10 transition duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/20"
                 >
                   <Image
                     src={r.img}
@@ -89,17 +89,21 @@ export function SaberPage() {
                     className="object-cover transition duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/40 to-navy/20" />
-                  <span className="absolute right-5 top-5 flex h-8 w-8 items-center justify-center rounded-full bg-cyan text-navy">
+                  <span className="absolute right-5 top-5 flex h-8 w-8 items-center justify-center rounded-full bg-cyan text-navy transition-transform duration-300 group-hover:scale-110">
                     <Plus className="h-4 w-4" />
                   </span>
-                  <div className="absolute inset-0 flex flex-col justify-start p-6 text-white">
-                    <h3 className="max-w-[70%] font-display text-2xl font-medium leading-tight">
-                      {r.title}
-                    </h3>
-                    <p className="mt-2 max-w-[80%] text-xs leading-snug text-white/85">
-                      {r.text}
-                    </p>
-                    <span className="mt-auto inline-block w-fit rounded-full bg-white/25 px-4 py-1.5 text-xs font-medium backdrop-blur-sm">
+                  {/* Layout: título arriba, texto en el medio, chip fecha
+                      pegado abajo — `justify-between` hace el trabajo. */}
+                  <div className="absolute inset-0 flex flex-col p-7 text-white">
+                    <div>
+                      <h3 className="max-w-[85%] text-balance font-display text-2xl font-bold leading-tight tracking-tight sm:text-3xl">
+                        {r.title}
+                      </h3>
+                      <p className="mt-3 max-w-[90%] text-pretty text-base leading-snug text-white/90 sm:text-lg">
+                        {r.text}
+                      </p>
+                    </div>
+                    <span className="mt-auto inline-block w-fit rounded-full border border-white/30 bg-white/15 px-4 py-1.5 text-sm font-medium backdrop-blur-md">
                       {r.date}
                     </span>
                   </div>
@@ -109,43 +113,44 @@ export function SaberPage() {
           </div>
         </div>
 
-        {/* NCSU study card */}
         <a
           href={NCSU_STUDY_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="group mt-6 grid items-center gap-8 overflow-hidden rounded-[24px] border border-white bg-white/40 p-6 shadow-xl shadow-navy/5 backdrop-blur-md transition hover:bg-white/60 sm:p-8 lg:grid-cols-[1.1fr_2fr]">
-          <div className="relative flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-sky-50 lg:h-64">
+          className="group mt-6 grid items-center gap-10 overflow-hidden rounded-[24px] border border-white bg-white/40 p-8 shadow-xl shadow-navy/5 backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/60 hover:shadow-2xl hover:shadow-navy/15 sm:p-12 lg:grid-cols-[1.1fr_2fr]">
+          <div className="relative flex h-56 items-center justify-center overflow-hidden rounded-2xl bg-sky-50 lg:h-72">
             <Image
               src="/images/saber/saber_ncsu_render.webp"
               alt={s.ncsuRenderAlt}
               fill
               sizes="(max-width: 1024px) 100vw, 30vw"
-              className="object-contain p-4"
+              className="object-contain p-4 transition duration-500 group-hover:scale-105"
             />
           </div>
           <div className="relative">
-            <span className="absolute right-0 top-0 flex h-11 w-11 items-center justify-center rounded-full bg-cyan text-navy">
+            <span className="absolute right-0 top-0 flex h-11 w-11 items-center justify-center rounded-full bg-cyan text-navy transition-transform duration-300 group-hover:scale-110">
               <Plus className="h-6 w-6" />
             </span>
-            <h3 className="max-w-2xl font-display text-3xl font-medium leading-tight text-navy sm:text-4xl">
+            <h3 className="max-w-2xl text-balance pr-14 font-display font-bold leading-tight tracking-tight text-navy text-3xl sm:text-4xl lg:whitespace-pre-line lg:text-subhead">
               {s.ncsuTitle}
             </h3>
-            <div className="mt-6 flex items-start gap-5">
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-start sm:gap-6">
               <Image
                 src="/images/saber/saber_ncsu_logo.webp"
                 alt={s.ncsuLogoAlt}
                 width={150}
                 height={72}
-                className="h-14 w-auto object-contain"
+                className="h-14 w-auto shrink-0 object-contain"
               />
-              <p className="max-w-md text-[15px] leading-relaxed text-navy/80">
+              <p className="max-w-md text-pretty text-lg leading-relaxed text-navy/80 sm:text-xl">
                 {s.ncsuText}
               </p>
             </div>
           </div>
         </a>
       </section>
+
+      <RelatedProducts current={null} variant="orb-halo-stacked" />
     </div>
   );
 }

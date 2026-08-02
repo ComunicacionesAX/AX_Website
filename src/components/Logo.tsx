@@ -9,13 +9,16 @@ export function Logo({
   variant?: Variant;
   className?: string;
 }) {
-  const color = variant === "cyan" ? "text-cyan" : "text-navy";
+  // En "cyan" (uso sobre header navy): isologo blanco, wordmark cyan.
+  // En "dark" (uso sobre fondo claro): ambos en navy.
+  const markColor = variant === "cyan" ? "text-white" : "text-navy";
+  const textColor = variant === "cyan" ? "text-cyan" : "text-navy";
 
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       <span
         aria-hidden
-        className={`block h-9 w-9 ${color}`}
+        className={`block h-9 w-9 ${markColor}`}
         style={{
           backgroundColor: "currentColor",
           WebkitMaskImage: `url(${MARK})`,
@@ -28,9 +31,9 @@ export function Logo({
           maskPosition: "center",
         }}
       />
-      <span className={`text-lg font-bold tracking-tight ${color}`}>
+      <span className={`whitespace-nowrap text-lg font-bold tracking-tight ${textColor}`}>
         Asimetrix
-        <span className="font-normal opacity-80"> | Farm Data Analytics</span>
+        <span className="hidden font-normal opacity-80 sm:inline"> | Farm Data Analytics</span>
       </span>
     </span>
   );
