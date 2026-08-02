@@ -102,9 +102,12 @@ export function VideoSection() {
   }, [videoId]);
 
   return (
-    <section className="bg-gradient-to-b from-white to-sky-50 pb-8">
+    <section className="bg-gradient-to-b from-white to-sky-50 pb-12 pt-12 sm:pt-16">
       <div className="container-x">
-        <div className="relative aspect-video overflow-hidden rounded-[2rem] bg-navy shadow-2xl shadow-navy/20">
+        <h2 className="mx-auto mb-10 max-w-3xl text-balance text-center font-display font-bold leading-[1.1] tracking-tight text-navy text-4xl sm:text-5xl lg:text-6xl">
+          {t.videoSection.title}
+        </h2>
+        <div className="relative aspect-video overflow-hidden rounded-3xl bg-navy shadow-2xl shadow-navy/25 ring-1 ring-navy/5">
           {/* La API de YouTube reemplaza este div por el iframe del reproductor. */}
           <div
             ref={containerRef}

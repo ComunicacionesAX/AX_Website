@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { LangSwitch } from "./LangSwitch";
+import { ExternalLink } from "lucide-react";
 import { useI18n } from "@/i18n/context";
+import { LangToggle } from "./LangToggle";
 
 function Instagram({ className = "" }: { className?: string }) {
   return (
@@ -22,48 +23,88 @@ function Linkedin({ className = "" }: { className?: string }) {
   );
 }
 
-export function Footer() {
+type FooterProps = {
+  /** Si true, omite las esquinas superiores redondeadas. Útil en páginas
+   *  como /poder-del-saber donde el contenido previo termina en un
+   *  gradient hacia navy y las curvas exponen parches del fondo. */
+  flushTop?: boolean;
+};
+
+export function Footer({ flushTop = false }: FooterProps = {}) {
   const { t } = useI18n();
   const columns = [t.footer.colProducts, t.footer.colSaber];
   return (
-    <footer className="bg-white px-4 pb-4 sm:px-6">
-      <div className="mx-auto max-w-[84rem]">
-        <div className="on-dark rounded-[2.5rem] bg-gradient-to-br from-teal to-navy px-8 py-11 text-white sm:px-14">
-          <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr]">
-            {/* Logo + tagline */}
-            <div>
-              <Image
-                src="/images/logo_ax_completo.svg"
-                alt={t.footer.logoAlt}
-                width={288}
-                height={53}
-                className="h-12 w-auto"
-              />
-              <div className="mt-6 flex gap-3">
-                <a
-                  href="https://www.instagram.com/asimetrix_?igsh=eXFjbmN1a2J0bnpq&utm_source=qr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-cyan transition hover:bg-white/10"
-                >
-                  <Instagram className="h-5 w-5" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/asimetrix/?viewAsMember=true"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-cyan transition hover:bg-white/10"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
+    <footer
+      className={`on-dark relative px-6 pt-10 pb-8 text-white sm:px-10 lg:px-16 lg:pt-14 lg:pb-10 ${
+        flushTop ? "" : "rounded-t-3xl"
+      }`}
+      style={{
+        // Gradient vertical: navy oscuro arriba → teal → mezcla teal-cyan
+        // abajo. Da la sensación de que el footer "amanece" desde el
+        // contenido de la página (que termina en oscuro/glass) hacia un
+        // color más claro y luminoso en el pie.
+        backgroundImage:
+          "linear-gradient(180deg, var(--color-navy) 0%, var(--color-teal) 65%, color-mix(in srgb, var(--color-cyan) 40%, var(--color-teal)) 100%)",
+      }}
+    >
+        <div className="container-x !px-0">
+          {/* Layout desktop: 4 columnas (Logo+redes | Cotizar | Productos | Saber | Login+idioma).
+              Mobile: Login+idioma primero, luego Cotizar, luego Productos, Saber, y Logo al final. */}
+          {/* Grid desktop: 5 columnas iguales (Logo | Productos | Saber |
+              Cotizar | Login) con gap uniforme → mismo aire entre todas.
+              max-w del footer ampliado a 88rem para dar espacio a las 5
+              columnas y evitar que "Escríbenos y te contactaremos" quede
+              apretado. */}
+          <div className="grid gap-12 lg:grid-cols-5 lg:gap-x-10">
+            {/* Columna 1 — Logo + redes sociales. Desktop: izquierda.
+                Mobile: al final del footer (order-last). */}
+            <div className="order-last flex justify-center lg:order-none lg:justify-start lg:self-start lg:pr-10">
+              <div className="inline-flex flex-col items-center gap-4">
+                {/* Logo trimmed — viewBox recortado a 542×130 (ratio 4.17),
+                    el original tenía ~40% de whitespace vertical. Ahora
+                    alinea visualmente con los <h4> de las columnas. */}
+                <Image
+                  src="/images/logo_ax_completo-trimmed.svg"
+                  alt={t.footer.logoAlt}
+                  width={542}
+                  height={130}
+                  className="block h-14 w-auto sm:h-16 lg:h-20"
+                />
+                <div className="flex gap-3">
+                  <a
+                    href="https://www.instagram.com/asimetrix_?igsh=eXFjbmN1a2J0bnpq&utm_source=qr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-cyan transition hover:bg-white/10"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/asimetrix/?viewAsMember=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-cyan transition hover:bg-white/10"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                </div>
+                {/* Toggle idioma — con padding extra separándolo de los
+                    íconos: es un control secundario, no debe competir
+                    visualmente con el CTA de Login. */}
+                <div className="mt-4">
+                  <LangToggle />
+                </div>
               </div>
             </div>
 
-            {columns.map((col) => (
-              <div key={col.title}>
-                <h4 className="text-lg font-medium text-white">{col.title}</h4>
+            {/* Columnas Productos + Poder del saber. En desktop van en el
+                orden natural (después del logo). En mobile: order-3 y
+                order-4 (después de Login+idioma y Cotizar). */}
+            {columns.map((col, i) => (
+              <div key={col.title} className={`lg:pt-4 ${i === 0 ? "order-3 lg:order-none" : "order-4 lg:order-none"}`}>
+                <h4 className="text-lg font-semibold text-white">{col.title}</h4>
                 <ul className="mt-4 space-y-3">
                   {col.links.map((l) => (
                     <li key={l.label}>
@@ -82,27 +123,46 @@ export function Footer() {
               </div>
             ))}
 
-            {/* Cotizar */}
-            <div>
-              <h4 className="text-lg font-medium text-white">{t.footer.quoteTitle}</h4>
-              <p className="mt-4 text-sm text-white/70">{t.footer.quoteText}</p>
+            {/* Cotizar — columna independiente (título + descripción link a
+                /cotizar). Desktop: después de las columnas de links. Mobile:
+                order-2 (después de Login+idioma), alineado a la izquierda
+                para matchear con los menús Productos y Saber. */}
+            <div className="order-2 flex flex-col items-start text-left lg:order-none lg:pt-4">
+              <a
+                href="/cotizar"
+                className="text-lg font-semibold text-white transition-colors hover:text-cyan"
+              >
+                {t.footer.quoteTitle}
+              </a>
+              <a
+                href="/cotizar"
+                className="mt-2 max-w-sm text-sm text-white/70 transition-colors hover:text-cyan"
+              >
+                {t.footer.quoteText}
+              </a>
+            </div>
+
+            {/* CTA Login — bloque independiente, order-first en mobile
+                (primera cosa que se ve al llegar al footer). En mobile
+                ocupa todo el ancho; en desktop queda compacto. */}
+            <div className="order-first flex lg:order-none lg:items-start lg:pt-4">
               <a
                 href="https://app.asimetrix.co/auth/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-navy transition hover:bg-white/90"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-cyan px-6 py-3 text-base font-semibold text-navy shadow-lg shadow-cyan/25 transition hover:bg-cyan/90 lg:w-auto"
               >
-                {t.footer.login}
+                {t.nav.login}
+                <ExternalLink aria-hidden="true" className="h-4 w-4 opacity-80" />
               </a>
-              <LangSwitch className="mt-3 text-xs text-white/80" />
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-white/70">
+          {/* Barra inferior: legal centrado. */}
+          <div className="mt-12 flex flex-col items-center gap-2 border-t border-white/10 pt-6 text-center text-sm text-white/70">
             <p className="text-pretty">{t.footer.legal}</p>
           </div>
         </div>
-      </div>
     </footer>
   );
 }

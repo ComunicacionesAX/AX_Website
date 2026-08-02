@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { OnixButton } from "@/components/OnixButton";
+import { CookieBannerPreview } from "@/components/CookieBannerPreview";
 import { LanguageProvider } from "@/i18n/context";
 
 const inter = Inter({
@@ -30,6 +31,14 @@ export default function RootLayout({
         <LanguageProvider>
           {children}
           <OnixButton />
+          {/* CookieBanner sigue desactivado por defecto — pero
+              CookieBannerPreview lo activa cuando la URL trae
+              ?cookies=1 o ?cookies=preview. Útil para QA/design review
+              sin exponer el banner a todos los visitantes.
+              El componente CookieBanner real vive en @/components/
+              CookieBanner y se activa en producción descomentando su
+              montaje aquí. */}
+          <CookieBannerPreview />
         </LanguageProvider>
       </body>
     </html>
