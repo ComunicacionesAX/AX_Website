@@ -2,56 +2,85 @@
 
 import Image from "next/image";
 import { useI18n } from "@/i18n/context";
+import { AnimatedStat } from "@/components/AnimatedStat";
 
 export function Ecosystem() {
   const { t } = useI18n();
   return (
     <section className="bg-white px-4 py-6 sm:px-6">
       <div className="mx-auto max-w-[84rem]">
-        <div className="overflow-hidden rounded-[2.5rem] bg-navy-800 px-8 py-20 text-white sm:px-14 lg:px-20">
-          <div className="grid gap-12 lg:grid-cols-2">
+        <div className="on-dark overflow-hidden rounded-3xl bg-navy-800 px-8 py-20 text-white sm:px-14 sm:py-24 lg:px-20 lg:py-28">
+          <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
             {/* Left: heading + iluma */}
-            <div className="flex flex-col justify-between gap-12">
-              <h2 className="section-title !text-white">
+            <div className="flex flex-col justify-between gap-14">
+              
+              <h2 className="font-display font-light leading-[1.1] tracking-tight text-white text-3xl sm:text-4xl lg:text-subhead">
                 {t.ecosystem.title1}
                 <br />
                 {t.ecosystem.title2}
                 <br />
                 {t.ecosystem.title3}
               </h2>
+              
               <Image
-                src="/images/Iluma-logo.webp"
+                src="/images/Iluma-logo-trimmed.webp"
                 alt="Iluma Alliance"
-                width={700}
-                height={310}
-                className="h-72 w-auto object-contain object-left"
+                width={2932}
+                height={1368}
+                sizes="(max-width: 1024px) 70vw, 45vw"
+                className="mx-auto h-auto w-full max-w-xs object-contain object-center lg:mx-0 lg:max-w-none lg:object-left"
               />
             </div>
 
-            {/* Right: copy + stats */}
-            <div className="lg:pt-2">
-              <p className="max-w-md text-pretty text-lg leading-relaxed text-white/70">
-                {t.ecosystem.copy}
-              </p>
+            <div className="flex flex-col items-center text-center sm:items-start sm:text-left lg:pt-2">
+              <div className="max-w-md space-y-4">
+                {t.ecosystem.copy.slice(0, 2).map((paragraph, i) => (
+                  <p
+                    key={i}
+                    className="text-pretty text-lg leading-relaxed text-white/80 sm:text-xl"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
 
-              <div className="mt-12 space-y-8">
-                <div>
-                  <div className="font-display text-5xl font-bold text-yellow sm:text-6xl">
-                    {t.ecosystem.stat1Value}
-                  </div>
-                  <p className="mt-2 font-semibold text-white">
+              <div className="mt-12 flex flex-col items-center gap-8 sm:items-start">
+                <div className="flex flex-col items-center gap-3 text-center sm:items-start sm:text-left">
+                  <AnimatedStat
+                    value={t.ecosystem.stat1Value}
+                    className="font-display text-5xl font-bold leading-tight tracking-tight text-yellow sm:text-6xl"
+                    forceTwoLines
+                  />
+                  <p className="max-w-sm text-pretty text-base font-semibold text-white sm:text-lg">
                     {t.ecosystem.stat1Label}
                   </p>
                 </div>
-                <div>
-                  <div className="font-display text-5xl font-bold text-yellow sm:text-6xl">
-                    {t.ecosystem.stat2Value}
-                  </div>
-                  <p className="mt-2 font-semibold text-white">
+
+                {/* Divider glaciar — self-center para alinearse solo. */}
+                <div
+                  aria-hidden="true"
+                  className="h-1 w-32 rounded-full bg-gradient-to-r from-teal via-cyan to-teal shadow-[0_0_12px_color-mix(in_srgb,var(--color-cyan)_60%,transparent)] sm:w-40"
+                />
+
+                <div className="flex flex-col items-center gap-3 text-center sm:items-start sm:text-left">
+                  <AnimatedStat
+                    value={t.ecosystem.stat2Value}
+                    className="font-display text-5xl font-bold leading-tight tracking-tight text-yellow sm:text-6xl"
+                    forceTwoLines
+                  />
+                  <p className="max-w-sm text-pretty text-base font-semibold text-white sm:text-lg">
                     {t.ecosystem.stat2Label}
                   </p>
                 </div>
               </div>
+
+              {/* Cierre editorial — párrafo 3 del copy debajo de las
+                  stats, como reflexión final. */}
+              {t.ecosystem.copy[2] && (
+                <p className="mt-10 max-w-md text-pretty text-lg leading-relaxed text-white/80 sm:text-xl">
+                  {t.ecosystem.copy[2]}
+                </p>
+              )}
             </div>
           </div>
         </div>
