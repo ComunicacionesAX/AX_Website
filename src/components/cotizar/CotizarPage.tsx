@@ -14,13 +14,27 @@ type FormDraft = {
   location: string;
   email: string;
   phone: string;
-  prodType: string | null;
-  animalCount: string | null;
+  /** Multi-selección ordenada: primer click → índice 0 → color 0, etc. */
+  prodTypes: string[];
+  /** Multi-selección ordenada; el color se empareja con el prodType del mismo índice. */
+  animalCounts: string[];
   /** Multi-selección: el usuario puede elegir varias soluciones a la vez. */
   solutions: string[];
   digLevel: number | null;
   message: string;
 };
+
+// Paleta emparejada — sólo tokens del DS Asimetrix (globals.css @theme):
+// teal / navy con texto blanco, cyan / yellow / sky con texto navy.
+// El i-ésimo prodType seleccionado y el i-ésimo animalCount comparten
+// color, en orden de click.
+const CHIP_PALETTE = [
+  { active: "border-teal bg-teal text-white shadow-sm shadow-teal/30" },
+  { active: "border-navy bg-navy text-white shadow-sm shadow-navy/30" },
+  { active: "border-cyan bg-cyan text-navy shadow-sm shadow-cyan/40" },
+  { active: "border-yellow bg-yellow text-navy shadow-sm shadow-yellow/40" },
+  { active: "border-sky bg-sky text-navy shadow-sm shadow-sky/40" },
+] as const;
 
 function SectionNumber({ n }: { n: number }) {
   return (
@@ -41,13 +55,17 @@ export function CotizarPage() {
   const [location, setLocation] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [prodType, setProdType] = useState<string | null>(null);
-  const [animalCount, setAnimalCount] = useState<string | null>(null);
+  const [prodTypes, setProdTypes] = useState<string[]>([]);
+  const [animalCounts, setAnimalCounts] = useState<string[]>([]);
   const [solutions, setSolutions] = useState<string[]>([]);
-  const toggleSolution = (name: string) =>
-    setSolutions((prev) =>
-      prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name],
-    );
+  const toggleOrdered =
+    (setter: React.Dispatch<React.SetStateAction<string[]>>) => (value: string) =>
+      setter((prev) =>
+        prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value],
+      );
+  const toggleProdType = toggleOrdered(setProdTypes);
+  const toggleAnimalCount = toggleOrdered(setAnimalCounts);
+  const toggleSolution = toggleOrdered(setSolutions);
   const [digLevel, setDigLevel] = useState<number | null>(null);
   const [message, setMessage] = useState("");
 
@@ -94,10 +112,10 @@ export function CotizarPage() {
         if (typeof d.location === "string") setLocation(d.location);
         if (typeof d.email === "string") setEmail(d.email);
         if (typeof d.phone === "string") setPhone(d.phone);
-        if (typeof d.prodType === "string" || d.prodType === null)
-          setProdType(d.prodType ?? null);
-        if (typeof d.animalCount === "string" || d.animalCount === null)
-          setAnimalCount(d.animalCount ?? null);
+        if (Array.isArray(d.prodTypes))
+          setProdTypes(d.prodTypes.filter((s): s is string => typeof s === "string"));
+        if (Array.isArray(d.animalCounts))
+          setAnimalCounts(d.animalCounts.filter((s): s is string => typeof s === "string"));
         if (Array.isArray(d.solutions)) {
           setSolutions(d.solutions.filter((s): s is string => typeof s === "string"));
         }
@@ -120,8 +138,8 @@ export function CotizarPage() {
       location,
       email,
       phone,
-      prodType,
-      animalCount,
+      prodTypes,
+      animalCounts,
       solutions,
       digLevel,
       message,
@@ -131,7 +149,7 @@ export function CotizarPage() {
     } catch {
       // Ignora quota errors.
     }
-  }, [name, company, location, email, phone, prodType, animalCount, solutions, digLevel, message]);
+  }, [name, company, location, email, phone, prodTypes, animalCounts, solutions, digLevel, message]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -184,8 +202,10 @@ export function CotizarPage() {
           location,
           email,
           phone,
-          prodType,
-          animalCount,
+          prodTypes,
+          animalCounts,
+          prodType: prodTypes.join(", "),
+          animalCount: animalCounts.join(", "),
           solutions,
           solution: solutions.join(", "),
           digLevel: digLevel !== null ? q.digLevels[digLevel] : "",
@@ -362,29 +382,37 @@ export function CotizarPage() {
                   <div>
                     <p className="text-base font-medium text-navy/60">{q.prodTypeLabel}</p>
                     <div className="mt-4 flex flex-wrap gap-3">
-                      {q.prodTypes.map((opt) => (
-                        <Chip
-                          key={opt}
-                          active={prodType === opt}
-                          onClick={() => setProdType(opt)}
-                        >
-                          {opt}
-                        </Chip>
-                      ))}
+                      {q.prodTypes.map((opt) => {
+                        const idx = prodTypes.indexOf(opt);
+                        return (
+                          <Chip
+                            key={opt}
+                            active={idx !== -1}
+                            paletteIndex={idx}
+                            onClick={() => toggleProdType(opt)}
+                          >
+                            {opt}
+                          </Chip>
+                        );
+                      })}
                     </div>
                   </div>
                   <div>
                     <p className="text-base font-medium text-navy/60">{q.animalCountLabel}</p>
                     <div className="mt-4 flex flex-wrap gap-3">
-                      {q.animalCounts.map((opt) => (
-                        <Chip
-                          key={opt}
-                          active={animalCount === opt}
-                          onClick={() => setAnimalCount(opt)}
-                        >
-                          {opt}
-                        </Chip>
-                      ))}
+                      {q.animalCounts.map((opt) => {
+                        const idx = animalCounts.indexOf(opt);
+                        return (
+                          <Chip
+                            key={opt}
+                            active={idx !== -1}
+                            paletteIndex={idx}
+                            onClick={() => toggleAnimalCount(opt)}
+                          >
+                            {opt}
+                          </Chip>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -763,12 +791,23 @@ function Field({
 function Chip({
   children,
   active,
+  paletteIndex = -1,
   onClick,
 }: {
   children: React.ReactNode;
   active: boolean;
+  /**
+   * Cuando ≥ 0, colorea el chip activo con la paleta CHIP_PALETTE en ese
+   * índice. Permite emparejar por orden de selección tipo de producción
+   * con cantidad de animales.
+   */
+  paletteIndex?: number;
   onClick: () => void;
 }) {
+  const paletteActive =
+    active && paletteIndex >= 0
+      ? CHIP_PALETTE[paletteIndex % CHIP_PALETTE.length].active
+      : "border-teal bg-teal text-white shadow-sm shadow-teal/30";
   return (
     <button
       type="button"
@@ -776,7 +815,7 @@ function Chip({
       aria-pressed={active}
       className={`rounded-full border-[1.5px] px-6 py-3 text-body-sm font-semibold transition ${
         active
-          ? "border-teal bg-teal text-white shadow-sm shadow-teal/30"
+          ? paletteActive
           : "border-line bg-white text-navy/80 hover:border-teal/60 hover:text-navy"
       }`}
     >
