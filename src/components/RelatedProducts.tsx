@@ -104,17 +104,19 @@ export function RelatedProducts({ current, variant = "orb" }: Props) {
     current === null ? c.discoverSubtitle : c.relatedSubtitle;
 
   return (
-    <section className="container-x pt-16 pb-24">
+    <section className="container-x pt-10 pb-24">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="section-title text-balance">{title}</h2>
         <p className="mt-4 text-lg text-navy/70">{subtitle}</p>
       </div>
 
       <div
-        className={`mt-14 grid gap-6 ${
+        className={`grid gap-6 ${
           others.length === 3 ? "lg:grid-cols-3" : "md:grid-cols-2"
         } ${
-          variant === "orb-halo-stacked" ? "items-stretch pt-24 sm:pt-28" : ""
+          variant === "orb-halo-stacked"
+            ? "items-stretch pt-16 sm:pt-20"
+            : "mt-14"
         }`}
       >
         {others.map((key) => {
