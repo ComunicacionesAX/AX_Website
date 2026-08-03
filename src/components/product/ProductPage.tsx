@@ -163,7 +163,8 @@ export function ProductPage({
               src={data.solutionImg}
               alt={data.solutionImgAlt}
               fill
-              sizes="(max-width: 1024px) 100vw, 40vw"
+              sizes="(max-width: 1024px) 448px, 40vw"
+              loading="eager"
               className="object-contain"
             />
           </div>
