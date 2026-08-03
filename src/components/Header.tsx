@@ -122,16 +122,16 @@ export function Header() {
                     }}
                   >
                     <div className="container-x py-8">
-                      <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] md:gap-12">
-                        
-                        <div className="relative hidden aspect-[4/3] overflow-hidden rounded-2xl bg-sky ring-1 ring-white/20 md:block">
+                      <div className="grid items-center gap-8 md:grid-cols-[minmax(0,320px)_minmax(0,1fr)] md:gap-12">
+
+                        <div className="relative hidden aspect-[4/3] w-full max-w-[320px] overflow-hidden rounded-2xl bg-sky ring-1 ring-white/20 md:block">
                           {products.map((p) => (
                             <Image
                               key={p.name}
                               src={p.img}
                               alt=""
                               fill
-                              sizes="(max-width: 1024px) 40vw, 500px"
+                              sizes="320px"
                               aria-hidden="true"
                               className={`object-contain p-3 transition-opacity duration-300 ${
                                 p.name === hoveredProduct
