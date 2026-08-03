@@ -1,8 +1,35 @@
 import { NextResponse } from "next/server";
+import { createHash } from "crypto";
 
-// URL del Web App de Google Apps Script (se configura en .env.local como
-// GOOGLE_SCRIPT_URL). Ver el script en scripts/google-apps-script.gs.
-const SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL;
+// Integración con Mailchimp Marketing API v3.
+// Config en .env.local:
+//   MAILCHIMP_API_KEY   → API key (termina en "-usXX"; el sufijo es el datacenter)
+//   MAILCHIMP_LIST_ID   → Audience ID (Settings → Audience name and defaults)
+//   MAILCHIMP_TAGS      → (opcional) tags fijos separados por coma, p.ej. "cotizacion,web"
+const API_KEY = process.env.MAILCHIMP_API_KEY;
+const LIST_ID = process.env.MAILCHIMP_LIST_ID;
+const STATIC_TAGS = (process.env.MAILCHIMP_TAGS ?? "")
+  .split(",")
+  .map((t) => t.trim())
+  .filter(Boolean);
+
+// El datacenter es el sufijo del API key ("abc123...-us21" → "us21").
+function datacenterFromKey(key: string): string | null {
+  const idx = key.lastIndexOf("-");
+  return idx === -1 ? null : key.slice(idx + 1);
+}
+
+// Mailchimp identifica al miembro por el MD5 del email en minúsculas.
+function subscriberHash(email: string): string {
+  return createHash("md5").update(email.toLowerCase()).digest("hex");
+}
+
+// Divide "Juan Pérez García" en nombre / apellidos para FNAME / LNAME.
+function splitName(full: string): { first: string; last: string } {
+  const parts = full.trim().split(/\s+/);
+  if (parts.length === 1) return { first: parts[0], last: "" };
+  return { first: parts[0], last: parts.slice(1).join(" ") };
+}
 
 export async function POST(request: Request) {
   let data: Record<string, unknown>;
@@ -25,53 +52,98 @@ export async function POST(request: Request) {
     );
   }
 
-  if (!SCRIPT_URL) {
+  if (!API_KEY || !LIST_ID) {
     return NextResponse.json(
-      { ok: false, error: "GOOGLE_SCRIPT_URL no está configurada." },
+      { ok: false, error: "Mailchimp no está configurado (falta MAILCHIMP_API_KEY o MAILCHIMP_LIST_ID)." },
       { status: 500 }
     );
   }
 
-  const payload = {
-    ...data,
-    submittedAt: new Date().toISOString(),
+  const dc = datacenterFromKey(API_KEY);
+  if (!dc) {
+    return NextResponse.json(
+      { ok: false, error: "MAILCHIMP_API_KEY no tiene el sufijo de datacenter (-usXX)." },
+      { status: 500 }
+    );
+  }
+
+  const { first, last } = splitName(name);
+
+  // Merge fields personalizados. Deben existir en la audiencia de Mailchimp
+  // (Settings → Audience fields and *|MERGE|* tags) con estos tags.
+  const mergeFields: Record<string, string> = {
+    FNAME: first,
+    LNAME: last,
+    PHONE: String(data.phone ?? ""),
+    COMPANY: String(data.company ?? ""),
+    LOCATION: String(data.location ?? ""),
+    PRODTYPE: String(data.prodType ?? ""),
+    ANIMALS: String(data.animalCount ?? ""),
+    SOLUTIONS: String(data.solution ?? ""),
+    DIGLEVEL: String(data.digLevel ?? ""),
+    MESSAGE: String(data.message ?? ""),
   };
 
+  // Tags: los fijos del .env + tipo de producción + cada solución elegida.
+  const solutions = Array.isArray(data.solutions)
+    ? (data.solutions as unknown[]).map((s) => String(s)).filter(Boolean)
+    : [];
+  const tagNames = [
+    ...STATIC_TAGS,
+    ...(data.prodType ? [String(data.prodType)] : []),
+    ...solutions,
+  ];
+
+  const url = `https://${dc}.api.mailchimp.com/3.0/lists/${LIST_ID}/members/${subscriberHash(email)}`;
+  const auth = "Basic " + Buffer.from(`anystring:${API_KEY}`).toString("base64");
+
   try {
-    const res = await fetch(SCRIPT_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-      // Apps Script responde con redirección 302 a googleusercontent; fetch
-      // la sigue por defecto.
-      redirect: "follow",
+    // PUT = upsert: crea el contacto o actualiza si el email ya existe.
+    const res = await fetch(url, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json", Authorization: auth },
+      body: JSON.stringify({
+        email_address: email,
+        status_if_new: "subscribed",
+        // No degradamos a alguien que ya se dio de baja: solo forzamos
+        // "subscribed" para contactos nuevos (status_if_new).
+        merge_fields: mergeFields,
+      }),
     });
 
-    // Apps Script puede devolver 200 con una página HTML (login/error) sin
-    // ejecutar el código, o un JSON {ok:false} si el script lanzó excepción.
-    // Verificamos el cuerpo real, no solo el status.
-    const text = await res.text();
-    let parsed: { ok?: boolean; error?: string } | null = null;
-    try {
-      parsed = JSON.parse(text);
-    } catch {
-      parsed = null;
-    }
+    const body = (await res.json().catch(() => null)) as
+      | { title?: string; detail?: string; status?: number }
+      | null;
 
-    if (!res.ok || !parsed || parsed.ok !== true) {
+    if (!res.ok) {
+      // 400 "Member In Compliance State" o similar: el email no se puede
+      // resuscribir por API. Lo tratamos como error de cliente.
       return NextResponse.json(
         {
           ok: false,
-          error: parsed?.error ?? `Respuesta inesperada del script (${res.status}).`,
+          error: body?.detail ?? `Mailchimp devolvió ${res.status}.`,
         },
-        { status: 502 }
+        { status: res.status >= 500 ? 502 : 422 }
       );
+    }
+
+    // Aplica los tags en una llamada aparte (endpoint dedicado de Mailchimp).
+    if (tagNames.length) {
+      await fetch(`${url}/tags`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Authorization: auth },
+        body: JSON.stringify({
+          tags: tagNames.map((nameTag) => ({ name: nameTag, status: "active" })),
+        }),
+      }).catch(() => {
+        // Los tags son best-effort: si fallan, el contacto ya quedó guardado.
+      });
     }
 
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json(
-      { ok: false, error: "No se pudo contactar al script." },
+      { ok: false, error: "No se pudo contactar a Mailchimp." },
       { status: 502 }
     );
   }
