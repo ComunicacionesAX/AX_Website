@@ -1,6 +1,7 @@
 // Enlaces externos centralizados.
 // Página de reservas de Google Calendar para agendar demos.
-export const DEMO_BOOKING_URL = "https://calendar.app.google/pCRm9g3otm93xg87A";
+export const DEMO_BOOKING_URL =
+  "https://calendar.google.com/appointments/schedules/AcZssZ0EaMnWhS24RLXAlgBHhCaL1tm4A9nFfz_Qz_W43ak7603M3ZmyuvbIgutXlywzG-kGOYZsYrLK";
 
 // Estudio de NC State University sobre PigVision (PDF).
 export const NCSU_STUDY_URL = "/docs/ncsu-pigvision-study.pdf";
