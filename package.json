@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "sst deploy --stage production"
+  },
+  "engines": {
+    "node": ">=20.9"
   },
   "dependencies": {
     "lucide-react": "^1.24.0",
@@ -22,6 +26,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
     "puppeteer-core": "^25.3.0",
+    "sst": "^4.17.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
