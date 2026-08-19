@@ -52,9 +52,13 @@ export function OnixButton() {
         aria-label={t.onix.reopen}
         className="group fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-navy/90 shadow-xl shadow-navy/30 ring-1 ring-white/15 backdrop-blur-sm transition hover:scale-105 hover:bg-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
       >
-        {/* Logo Onix — mismo que el widget completo, así se reconoce. */}
+        {/* Logo Onix — mismo que el widget completo, así se reconoce.
+            WebP de 176px (4x del uso máximo) en vez del SVG original: ese
+            SVG pesaba 415 KB porque lleva 98 rasters embebidos en base64, y
+            next/image no optimiza SVG, así que se servía completo. El WebP
+            pesa 6 KB con render equivalente (verificado en Chrome). */}
         <Image
-          src="/images/logo_onix.svg"
+          src="/images/logo_onix.webp"
           alt=""
           width={40}
           height={40}
@@ -83,7 +87,7 @@ export function OnixButton() {
       >
         <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-navy">
           <Image
-            src="/images/logo_onix.svg"
+            src="/images/logo_onix.webp"
             alt="Onix"
             width={48}
             height={48}

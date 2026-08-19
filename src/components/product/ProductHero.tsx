@@ -58,7 +58,9 @@ export function ProductHero({
             muted
             loop
             playsInline
-            preload="auto"
+            // Ver nota en Hero.tsx: evita bajar el mp4 completo antes de que
+            // `useCanPlayVideo` decida si corresponde reproducirlo.
+            preload="metadata"
             poster={poster}
             className="absolute inset-0 h-full w-full object-cover"
           >
@@ -69,6 +71,7 @@ export function ProductHero({
             src={poster}
             alt=""
             aria-hidden="true"
+            fetchPriority="high"
             className="absolute inset-0 h-full w-full object-cover"
           />
         )}
@@ -78,12 +81,21 @@ export function ProductHero({
 
       <div className="container-x relative flex min-h-[100vh] flex-col items-center justify-center pb-28 pt-36 text-center lg:items-start lg:text-left">
         <div className="order-1 max-w-5xl animate-fade-up lg:order-none">
-          <h1 className="font-display text-hero font-light leading-[0.92] tracking-tight">
-            {title}
+          {/* El subtitle va DENTRO del h1: el nombre de producto solo
+              ("PigVision", "Insylo") no tiene intención de búsqueda — nadie
+              busca la marca. Metiendo la línea descriptiva que ya estaba
+              debajo, el h1 pasa a contener las keywords reales sin cambiar
+              el copy ni el diseño.
+              `tracking-tight` baja del h1 al título: letter-spacing se hereda
+              como longitud ya computada, así que dejarlo en el h1 le pasaba al
+              subtítulo -4px en vez del -0.16px que heredaba del body cuando
+              era un <p> hermano. */}
+          <h1 className="font-display text-hero font-light leading-[0.92]">
+            <span className="block tracking-tight">{title}</span>
+            <span className="mt-5 block max-w-2xl whitespace-pre-line font-display text-2xl font-light leading-tight text-white/90 sm:text-subhead">
+              {subtitle}
+            </span>
           </h1>
-          <p className="mt-5 max-w-2xl whitespace-pre-line font-display text-2xl font-light leading-tight text-white/90 sm:text-subhead">
-            {subtitle}
-          </p>
           {extraLine && (
             <p className="mt-3 text-lg text-white/90 sm:text-2xl">
               {extraLine}

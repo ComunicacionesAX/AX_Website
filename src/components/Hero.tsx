@@ -18,7 +18,13 @@ export function Hero() {
             muted
             loop
             playsInline
-            preload="auto"
+            // "metadata" en vez de "auto": `useCanPlayVideo` arranca en `true`,
+            // así que el <video> ya está en el HTML inicial y con "auto" el
+            // navegador empezaba a bajar el archivo completo antes de que el
+            // efecto pudiera descartarlo por reduced-motion o red lenta.
+            // Con autoplay el navegador igual bufferea lo necesario para
+            // reproducir: el ahorro grande sigue siendo comprimir el mp4.
+            preload="metadata"
             poster="/images/home_produccion_fotograma.webp"
             className="absolute inset-0 h-full w-full object-cover"
           >
@@ -29,6 +35,9 @@ export function Hero() {
             src="/images/home_produccion_fotograma.webp"
             alt=""
             aria-hidden="true"
+            // Es el LCP cuando no se reproduce video (reduced-motion, Data
+            // Saver, 2g/3g) — justo los escenarios donde más pesa el retraso.
+            fetchPriority="high"
             className="absolute inset-0 h-full w-full object-cover"
           />
         )}
@@ -38,13 +47,17 @@ export function Hero() {
 
       <div className="container-x relative flex min-h-[100vh] flex-col items-center justify-center pb-28 pt-36 text-center lg:items-start lg:text-left">
         <div className="animate-fade-up lg:max-w-[65%]">
-          <h1 className="font-display text-hero-sm font-light leading-[0.95] tracking-tight">
-            <span className="block lg:whitespace-nowrap">{t.hero.title1}</span>
-            <span className="block lg:whitespace-nowrap">{t.hero.title2}</span>
+          {/* Ver nota en ProductHero: el subtitle ("Monitoreo inteligente
+              para granjas porcinas y avícolas") entra al h1 para que el
+              encabezado principal contenga las keywords, sin tocar el copy.
+              El claim de marca sigue siendo la primera línea visual. */}
+          <h1 className="font-display text-hero-sm font-light leading-[0.95]">
+            <span className="block tracking-tight lg:whitespace-nowrap">{t.hero.title1}</span>
+            <span className="block tracking-tight lg:whitespace-nowrap">{t.hero.title2}</span>
+            <span className="mt-5 block whitespace-pre-line text-pretty font-display text-xl font-light leading-tight text-white/90 sm:whitespace-normal sm:text-2xl lg:text-3xl">
+              {t.hero.subtitle}
+            </span>
           </h1>
-          <p className="mt-5 whitespace-pre-line text-pretty font-display text-xl font-light leading-tight text-white/90 sm:whitespace-normal sm:text-2xl lg:text-3xl">
-            {t.hero.subtitle}
-          </p>
         </div>
 
         <div

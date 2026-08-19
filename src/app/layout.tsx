@@ -4,6 +4,9 @@ import "./globals.css";
 import { OnixButton } from "@/components/OnixButton";
 import { CookieBannerPreview } from "@/components/CookieBannerPreview";
 import { LanguageProvider } from "@/i18n/context";
+import { JsonLd } from "@/components/JsonLd";
+import { organizationSchema, webSiteSchema } from "@/lib/schema";
+import { DEFAULT_DESCRIPTION, DEFAULT_TITLE, SITE_URL } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,9 +15,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Asimetrix | Monitoreo inteligente para granjas porcinas y avícolas",
-  description:
-    "Cámaras inteligentes, sensores y herramientas de IA que transforman datos en rentabilidad para granjas porcinas y avícolas.",
+  // Base para resolver canonical y Open Graph relativos. Se define una sola
+  // vez acá; las páginas sólo declaran su path (ver src/lib/seo.ts).
+  metadataBase: new URL(SITE_URL),
+  title: DEFAULT_TITLE,
+  description: DEFAULT_DESCRIPTION,
   icons: {
     icon: "/favicon.svg",
   },
@@ -34,6 +39,9 @@ export default function RootLayout({
           
           <CookieBannerPreview />
         </LanguageProvider>
+        {/* Datos estructurados globales. No renderizan nada visible. */}
+        <JsonLd data={organizationSchema} />
+        <JsonLd data={webSiteSchema} />
       </body>
     </html>
   );
