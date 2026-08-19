@@ -36,6 +36,10 @@
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "sst.config.ts",
+    "sst-env.d.ts",
+    ".sst",
+    ".open-next"
   ]
 }
