@@ -105,6 +105,43 @@ export function breadcrumbSchema({
   };
 }
 
+type FaqInput = {
+  path: string;
+  items: { q: string; a: string }[];
+};
+
+/**
+ * `FAQPage` para el hub de preguntas frecuentes.
+ *
+ * Expectativa a tener clara: esto NO produce rich results. Google restringió
+ * el formato de FAQ a sitios de gobierno y salud en agosto de 2023, así que un
+ * dominio comercial puede marcarlo bien y no ver nunca el acordeón en el SERP.
+ * Se marca por otras razones: es la fuente que citan las respuestas
+ * generativas (AI Overviews, ChatGPT, Perplexity) y clarifica la entidad.
+ * Ver §2.5.1 de `SEO-AUDIT.md`.
+ *
+ * Sólo una entidad `FAQPage` por URL. Si más adelante se añaden bloques de FAQ
+ * al cierre de las páginas de producto, cada una emite la suya con SUS
+ * preguntas — son URLs distintas, así que no hay conflicto.
+ *
+ * Las respuestas se marcan tal cual se publican: una pregunta sin respuesta
+ * definida no va ni en la página ni acá.
+ */
+export function faqSchema({ path, items }: FaqInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${SITE_URL}${path}/#faq`,
+    inLanguage: "es",
+    publisher: { "@id": ORG_ID },
+    mainEntity: items.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  };
+}
+
 type VideoInput = {
   name: string;
   description: string;

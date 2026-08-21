@@ -121,6 +121,14 @@ export function Footer({ flushTop = false }: FooterProps = {}) {
               >
                 {t.footer.quoteText}
               </a>
+              {/* La FAQ va junto a Cotizar, no en la columna de recursos: la
+                  duda que resuelve aparece justo antes de pedir precio. */}
+              <a
+                href="/preguntas-frecuentes"
+                className="mt-4 text-sm text-white/70 transition-colors hover:text-cyan"
+              >
+                {t.footer.faq}
+              </a>
             </div>
 
             <div className="order-first flex lg:order-none lg:items-start lg:pt-4">

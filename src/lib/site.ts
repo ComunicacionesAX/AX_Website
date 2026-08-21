@@ -31,5 +31,6 @@ export const ROUTES = [
   { path: "/insylo", priority: 0.9 },
   { path: "/nodos", priority: 0.9 },
   { path: "/poder-del-saber", priority: 0.8 },
+  { path: "/preguntas-frecuentes", priority: 0.7 },
   { path: "/cotizar", priority: 0.7 },
 ] as const;
