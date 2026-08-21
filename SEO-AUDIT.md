@@ -9,6 +9,11 @@
 > Ver [§7 Estado de implementación](#7-estado-de-implementación) para el detalle de qué se hizo y qué queda.
 > Las secciones 1 a 4 describen el diagnóstico **original**, previo a los cambios.
 
+> **Fe de errata · 21 de agosto de 2026.** La versión original justificaba la página de FAQ
+> por "habilitar rich results". Es incorrecto: Google restringió ese formato en agosto de 2023.
+> La tarea sigue siendo válida, con otra justificación. Corregido en [§2.5.1](#251-corrección-faqpage-ya-no-genera-rich-results)
+> y en la tarea 2.4 de la Fase 2.
+
 ---
 
 ## Resumen ejecutivo
@@ -180,13 +185,40 @@ No hay **ni un párrafo de contenido propio indexable**. La página que debería
 
 ## 2.5. Datos estructurados: ninguno
 
-Sin JSON-LD se pierden todas las oportunidades de rich results:
+Sin JSON-LD se pierden oportunidades de rich results y de clarificación de entidad:
 
 - **`Organization`** — empresa, logo, sede en Durham NC, pertenencia a Iluma Alliance, perfiles sociales
 - **`Product`** — para PigVision, Insylo y Nodos, con las cifras de precisión que ya están en el copy (97%, 99%, ROI 8:1)
 - **`BreadcrumbList`** — el componente `Breadcrumbs.tsx` ya es semánticamente correcto, solo falta el marcado
-- **`FAQPage`** — no existe página de FAQ
+- **`FAQPage`** — no existe página de FAQ. **Ojo con la expectativa:** ver 2.5.1
 - **`VideoObject`** — hay 4 videos sin marcado ni transcripción
+
+### 2.5.1. Corrección: `FAQPage` ya no genera rich results
+
+**Este es un error de la versión original de esta auditoría, corregido el 21 de agosto de 2026.**
+
+La auditoría original justificaba la página de FAQ diciendo que "habilita rich results".
+Eso dejó de ser cierto: en **agosto de 2023 Google restringió los rich results de FAQ
+a sitios de autoridad gubernamental y de salud**. Un sitio comercial como `asimetrix.co`
+puede marcar `FAQPage` correctamente y no verá nunca el acordeón ni ningún adorno en el
+resultado de búsqueda.
+
+**Marcar `FAQPage` sigue valiendo la pena, pero por otras razones:**
+
+1. **Captura long-tail** — el valor está en el contenido de las preguntas, no en el marcado.
+2. **Es la fuente que citan las respuestas generativas** — AI Overviews, ChatGPT y
+   Perplexity resuelven consultas citando FAQs. En español, sobre monitoreo de peso
+   porcino y medición de alimento en silo, casi nadie está ahí.
+3. **Clarifica la entidad** — ayuda a Google a entender qué es Asimetrix y qué hace cada
+   producto.
+
+**Regla general que se deriva de esto, aplicable al resto del plan:** ningún ítem de este
+documento debe justificarse por "habilita rich results" sin verificar antes que el tipo de
+rich result siga activo para sitios comerciales. Las políticas de resultados enriquecidos
+cambian y este documento las asumió estáticas. Lo mismo aplica a `HowTo` (retirado en
+agosto de 2023) y a `sitelinks searchbox` (retirado en noviembre de 2023).
+
+Ver también §7 de este documento y la nota equivalente en la propuesta de FAQs.
 
 ---
 
@@ -281,7 +313,7 @@ Patrones repetidos entre los que lo hacen bien y que AX no tiene:
 | 2.1 | **i18n con rutas reales**: `/es/*` y `/en/*`, `hreflang`, `lang` correcto en SSR | Duplica el inventario indexable con contenido ya escrito. **Mayor ROI del proyecto.** |
 | 2.2 | Reposicionar `/insylo` a keywords descriptivas | El término de marca está tomado por un competidor (2.3) |
 | 2.3 | Páginas por audiencia (`/productores`, `/tecnicos`) desde `Audience.tsx` | Patrón validado por BinSentry e Insylo |
-| 2.4 | Página `/faq` con `FAQPage` schema | Captura long-tail y habilita rich results; BinSentry la tiene |
+| 2.4 | Página `/preguntas-frecuentes` con `FAQPage` schema | Captura long-tail y alimenta las respuestas generativas (AI Overviews, ChatGPT). **No genera rich results** desde agosto 2023: ver 2.5.1. Validado por el referente del sector |
 | 2.5 | `VideoObject` schema + transcripciones de los 4 videos | Contenido indexable a partir de assets existentes |
 | 2.6 | Search Console, analítica y línea base de Core Web Vitals | Sin medición no hay iteración |
 
