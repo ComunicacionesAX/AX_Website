@@ -52,9 +52,14 @@
       "Read(//Users/ASTORYTELLER/**)",
       "Bash(ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=8 -o BatchMode=yes -T git@github.com)",
       "Bash(git credential-osxkeychain *)",
-      "Bash(curl -s https://api.github.com/repos/ComunicacionesAX/AX_Website)",
+      "Bash(curl -s https://api.github.com/repos/DesarrolloAsimetrix/AX_Website)",
       "Bash(gh auth *)",
-      "Bash(gh repo *)"
+      "Bash(gh repo *)",
+      "Bash(npx tsc *)",
+      "Bash(command -v nvm)",
+      "Bash(python3 -)",
+      "Bash(pkgutil --pkgs)",
+      "Bash(sw_vers)"
     ]
   }
 }
